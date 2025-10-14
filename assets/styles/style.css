@@ -1,35 +1,106 @@
-*{
+/* Reset básico */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-:root{
-
-}
-/*.cinzel-decorative-regular {
-  font-family: "Cinzel Decorative", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.cinzel-decorative-bold {
-  font-family: "Cinzel Decorative", serif;
-  font-weight: 700;
-  font-style: normal;
+/* Determinando variáveis*/
+:root {
+    --vermelho_escuro: #891515;
+    --verde_vivido: #2c8909;
+    --preto: #000;
+    --pretoheader: #00000031;
+    --branco: #ffffff;
+    --cinzel_fonte: "Cinzel Decorative", serif;
+    --adventure_fonte: "adventure",serif;
+    --ttnorms_fonte: "ttnorms", serif;
 }
 
-.cinzel-decorative-black {
-  font-family: "Cinzel Decorative", serif;
-  font-weight: 900;
-  font-style: normal;
-}
- */
-@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap');
+/*font-family: */
+
 @font-face {
     font-family: "adventure";
-    src: url();
+    src: url('../fontes/adventures-unlimited-script-regular-maisfontes.14f6/adventures-unlimited-script-regular.otf') format('opentype');
 }
 
-.container{
+@font-face {
+    font-family: "ttnorms";
+    src: url('../fontes/TT\ Norms\ Pro\ Serif\ Trial\ Regular.ttf') format('truetype');
+}
+/* Tela inicial */
+.inicio {
     height: 100vh;
+    background-image: url(../img/home/bghome.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+header {
+    background-color: var(--pretoheader);
+    position: fixed;
+}
+
+.logohome {
+    width: 15%;
+    margin-left: 1.5rem;
+}
+
+.frase-inicial{
+    position: relative;
+    top: 35vh;
+    display: grid;
+    width: 70vh;
+}
+.slogan1 {
+    font-family: var(--adventure_fonte);
+    color: var(--branco);
+    font-size: 8rem; 
+    display: flex;
+    justify-content: left;
+    em{
+        color: var(--verde_vivido)
+    }
+}
+
+.slogan2 {
+    font-family: var(--adventure_fonte);
+    color: var(--branco);
+    font-size: 8rem;
+    display: flex;
+    justify-content: end;
+    margin-top: -7rem;
+    margin-left: 2rem;
+    em{
+        color: var(--vermelho_escuro);
+    }
+}
+
+.nav-item {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    a {
+        color: #ffffff;
+    }
+    font-family: var(--cinzel_fonte);
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+
+/*---------------------------------------------------------------------------TELA PHONES-------------------------------------------------------------------------------------- */
+
+@media only screen and (max-width: 600px) {
+
+    /*----------------------------------------------------------------------Tela inicial phone ---------------------------------------- */
+    .inicio {
+        height: 60vh;
+        background-image: url(../img/home/bghome.svg);
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+        background-position: right;
+    }
+
+
+
 }
