@@ -4,15 +4,17 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 /* Determinando variáveis*/
 :root {
     --vermelho_escuro: #891515;
+    --vermelho_vivido: #d40101;
     --verde_vivido: #2c8909;
     --preto: #000;
     --pretoheader: #00000031;
     --branco: #ffffff;
     --cinzel_fonte: "Cinzel Decorative", serif;
-    --adventure_fonte: "adventure",serif;
+    --adventure_fonte: "adventure", serif;
     --ttnorms_fonte: "ttnorms", serif;
 }
 
@@ -25,12 +27,14 @@
     font-family: "ttnorms";
     src: url('../fontes/TT\ Norms\ Pro\ Serif\ Trial\ Regular.ttf') format('truetype');
 }
+
 /* Tela inicial */
 .inicio {
     height: 100vh;
     background-image: url(../img/home/bghome.svg);
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: bottom;
 }
 
 header {
@@ -39,28 +43,29 @@ header {
     display: flex;
 }
 
-.icones{
-    background-color: aqua;
+.icones {
+    /* background-color: aqua; */
     width: 10vh;
     height: 10vh;
-    i{
+
+    i {
         z-index: 1000;
         color: var(--branco);
     }
 }
 
 .logohome {
-    width: 15%;
+    width: 20%;
     margin-left: 1.5rem;
 }
 
-.frase-inicial{
+.frase-inicial {
     position: absolute;
-    top: 30vh;
+    top: 22vh;
     display: grid;
-    width: 45vh;
+    width: 105vh;
     margin: 0 auto;
-    left: 50%;
+    left: 35%;
     transform: translateX(-50%);
     align-items: center;
 }
@@ -68,57 +73,120 @@ header {
 .slogan1 {
     font-family: var(--adventure_fonte);
     color: var(--branco);
-    font-size: 5.5rem; 
-    display: flex;
-    justify-content: start;
-    em{
-        color: var(--verde_vivido)
+    font-size: 10rem;
+    text-align: start;
+    font-weight: 570;
+    word-spacing: 0.5rem;
+
+    strong {
+        color: var(--verde_vivido);
+        font-weight: 590;
     }
 }
 
 .slogan2 {
     font-family: var(--adventure_fonte);
     color: var(--branco);
-    font-size: 5.5rem;
-    display: flex;
-    justify-content: end;
-    margin-top: -5rem;
-    margin-left: 2rem;
-    em{
-        color: var(--vermelho_escuro);
+    font-size: 10rem;
+    text-align: end;
+    margin-top: -9rem;
+    font-weight: 570;
+    word-spacing: 0.5rem;
+
+    strong {
+        color: var(--vermelho_vivido);
+        font-weight: 590;
     }
 }
-nav{
+
+nav {
     .nav-item {
-    a {
-        color: #ffffff;
+        padding-right: 4vh;
+        padding-left: 4vh;
+
+        a {
+            color: #ffffff;
+        }
+
+        font-family: var(--cinzel_fonte);
+        font-size: 1.5rem;
+        font-weight: 600;
     }
-    font-family: var(--cinzel_fonte);
-    font-size: 1.5rem;
-    font-weight: 600;
-    }
-    .container-fluid{
+
+    .container-fluid {
         display: flex;
         justify-content: center;
         align-content: center;
+        width: 100%;
     }
 }
 
-
+.navbar-brand {
+    width: 40%;
+}
 
 /*---------------------------------------------------------------------------TELA PHONES-------------------------------------------------------------------------------------- */
 
 @media only screen and (max-width: 600px) {
 
     /*----------------------------------------------------------------------Tela inicial phone ---------------------------------------- */
+
     .inicio {
-        height: 60vh;
+        height: 70vh;
         background-image: url(../img/home/bghome.svg);
         background-size: auto 100%;
         background-repeat: no-repeat;
-        background-position: right;
+        background-position: center;
+        overflow-x: hidden;
+    }
+    a.nav-link{
+        font-size: 1.5vh;
+    }
+    .logohome {
+        width: 50%;
+        margin-left: 1.5rem;
+    }
+    .navbar-toggler-icon {
+        background-image: url(../img/icons/menu.svg)!important;
     }
 
+    /* .frase-inicial {
+        margin: 0 auto;
+        left: 50%;
+        transform: translateX(-50%);
+    } */
+    .frase-inicial {
+        position: relative;
+        top: 13vh;
+        margin: 0 auto;
+        left: 50%;
+        transform: translateX(-21%);
 
+    }
 
+    button.navbar-toggler {
+        border-radius: 1rem;
+        width: 60px;
+        height: 60px;
+        z-index: 1000;
+    }
+
+    .slogan1,
+    .slogan2 {
+        width: 45vh;
+        font-size: 4.8rem;
+    }
+
+    .slogan1 {
+        text-align: center;
+        position: relative;
+        top: 5vh;
+        word-spacing: 0.1rem;
+
+    }
+
+    .slogan2 {
+        text-align: center;
+        margin-top: 2px;
+    }
 }
