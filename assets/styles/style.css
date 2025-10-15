@@ -16,8 +16,6 @@
     --ttnorms_fonte: "ttnorms", serif;
 }
 
-/*font-family: */
-
 @font-face {
     font-family: "adventure";
     src: url('../fontes/adventures-unlimited-script-regular-maisfontes.14f6/adventures-unlimited-script-regular.otf') format('opentype');
@@ -38,6 +36,17 @@
 header {
     background-color: var(--pretoheader);
     position: fixed;
+    display: flex;
+}
+
+.icones{
+    background-color: aqua;
+    width: 10vh;
+    height: 10vh;
+    i{
+        z-index: 1000;
+        color: var(--branco);
+    }
 }
 
 .logohome {
@@ -46,17 +55,22 @@ header {
 }
 
 .frase-inicial{
-    position: relative;
-    top: 35vh;
+    position: absolute;
+    top: 30vh;
     display: grid;
-    width: 70vh;
+    width: 45vh;
+    margin: 0 auto;
+    left: 50%;
+    transform: translateX(-50%);
+    align-items: center;
 }
+
 .slogan1 {
     font-family: var(--adventure_fonte);
     color: var(--branco);
-    font-size: 8rem; 
+    font-size: 5.5rem; 
     display: flex;
-    justify-content: left;
+    justify-content: start;
     em{
         color: var(--verde_vivido)
     }
@@ -65,27 +79,31 @@ header {
 .slogan2 {
     font-family: var(--adventure_fonte);
     color: var(--branco);
-    font-size: 8rem;
+    font-size: 5.5rem;
     display: flex;
     justify-content: end;
-    margin-top: -7rem;
+    margin-top: -5rem;
     margin-left: 2rem;
     em{
         color: var(--vermelho_escuro);
     }
 }
-
-.nav-item {
-    display: flex;
-    justify-content: center;
-    align-content: center;
+nav{
+    .nav-item {
     a {
         color: #ffffff;
     }
     font-family: var(--cinzel_fonte);
     font-size: 1.5rem;
     font-weight: 600;
+    }
+    .container-fluid{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
 }
+
 
 
 /*---------------------------------------------------------------------------TELA PHONES-------------------------------------------------------------------------------------- */
