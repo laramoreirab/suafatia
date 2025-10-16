@@ -13,9 +13,11 @@
     --preto: #000;
     --pretoheader: #00000031;
     --branco: #ffffff;
+    --cinza_claro: #d9d9d9;
+    --amarelo_apagado: #d2b27a;
     --cinzel_fonte: "Cinzel Decorative", serif;
     --adventure_fonte: "adventure", serif;
-    --ttnorms_fonte: "ttnorms", serif;
+    --montserrat_fonte: "Montserrat", sans-serif;
 }
 
 @font-face {
@@ -23,10 +25,6 @@
     src: url('../fontes/adventures-unlimited-script-regular-maisfontes.14f6/adventures-unlimited-script-regular.otf') format('opentype');
 }
 
-@font-face {
-    font-family: "ttnorms";
-    src: url('../fontes/TT\ Norms\ Pro\ Serif\ Trial\ Regular.ttf') format('truetype');
-}
 
 /* Tela inicial */
 .inicio {
@@ -41,19 +39,13 @@ header {
     background-color: var(--pretoheader);
     position: fixed;
     display: flex;
+    z-index: 1000;
 }
 
-.icones {
-    /* background-color: aqua; */
-    width: 10vh;
-    height: 10vh;
-
-    i {
-        z-index: 1000;
-        color: var(--branco);
-    }
+.material-symbols-outlined{
+    color: var(--branco);
+    font-size: 38px !important;
 }
-
 .logohome {
     width: 20%;
     margin-left: 1.5rem;
@@ -125,12 +117,116 @@ nav {
     width: 40%;
 }
 
+/* ---------------------------------------------------Tela Personalize ----------------------------------*/
+.back-video-container{
+    width: 100%;
+    overflow-x: hidden;
+}
+.personalizetitle{
+    font-family: var(--cinzel_fonte);
+    color: var(--branco);
+    font-size: 6vh;
+    text-align: center;
+    padding-bottom: 11vh;
+}
+.textpersonalize{
+    color: var(--branco);
+    font-family: var(--montserrat_fonte);
+    width: 100vh;
+    font-size: 2.8vh;
+    text-align: center;
+    margin: auto;
+    padding-bottom: 10vh;
+}
+.context{
+    position: relative;
+    top: -100vh;
+}
+.bttexperimente{
+    font-family: var(--cinzel_fonte);
+    font-size: 2vh;
+    font-weight: 900;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    button{
+        width: 25vh;
+        height: 6vh;
+        border-radius: 0.45rem;
+        border: none;
+    }
+}
+/* Tela carrossel */
+#carousel{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+.telacarrossel{
+    background-color: var(--cinza_claro) ;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    border-radius: 0.4rem;
+    height: 70vh;
+}
+.telacarrossel2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+.carousel-control-prev-icon{
+    background-image: url(../img/icons/anterior_carrossel.png)!important;
+}
+.carousel-control-next-icon{
+    background-image: url(../img/icons/proximo_carrossel.png)!important;
+}
+.titulocursivo{
+    font-family: var(--adventure_fonte);
+    text-align: center;
+    font-size: 8rem;
+}
+.carousel-item{
+    img{
+        width: 5%;
+    }
+}
+.titulocard{
+    font-family: var(--cinzel_fonte);
+    font-weight: 700;
+    text-align: center;
+}
+
+.descricaocard{
+    font-family: var(--montserrat_fonte);
+    text-align: center;
+}
+.botaocard{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    
+    button{
+        border-radius:  0 30px  0 30px ;
+        border-color: transparent;
+        font-family: var(--montserrat_fonte);
+        font-weight: 600;
+        background-color: var(--amarelo_apagado);
+        text-align: center;
+        width: 10vh;
+        height:4.5vh;
+    }
+}
+
 /*---------------------------------------------------------------------------TELA PHONES-------------------------------------------------------------------------------------- */
 
 @media only screen and (max-width: 600px) {
 
     /*----------------------------------------------------------------------Tela inicial phone ---------------------------------------- */
-
     .inicio {
         height: 70vh;
         background-image: url(../img/home/bghome.svg);
@@ -188,5 +284,47 @@ nav {
     .slogan2 {
         text-align: center;
         margin-top: 2px;
+    }
+    /*--------------------------------------Tela personalize phone------------------------- */
+    .personalize{
+        height: 70vh;
+        overflow:hidden;
+    }
+    .back-video-container{
+        width: 100%;
+        overflow-x: hidden;
+    }
+    .personalizetitle{
+        font-family: var(--cinzel_fonte);
+        color: var(--branco);
+        font-size: 6vh;
+        text-align: center;
+        padding-bottom: 11vh;
+    }
+    .textpersonalize{
+        color: var(--branco);
+        width: 100vh;
+        font-size: 3vh;
+        text-align: center;
+        margin: auto;
+        padding-bottom: 10vh;
+    }
+    .context{
+        position: relative;
+        top: -100vh;
+    }
+    .bttexperimente{
+        font-family: var(--cinzel_fonte);
+        font-size: 2vh;
+        font-weight: 900;
+        display: flex;
+        justify-content: center;
+        text-decoration: none;
+        button{
+            width: 25vh;
+            height: 6vh;
+            border-radius: 0.45rem;
+            border: none;
+        }
     }
 }
