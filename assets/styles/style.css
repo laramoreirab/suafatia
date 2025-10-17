@@ -12,6 +12,7 @@
     --verde_vivido: #2c8909;
     --preto: #000;
     --pretoheader: #00000031;
+    --preto_acizentado: #2b2b2b;
     --branco: #ffffff;
     --cinza_claro: #d9d9d9;
     --amarelo_apagado: #d2b27a;
@@ -42,19 +43,24 @@ header {
     z-index: 1000;
     width: 100%;
 }
-.navbar-expand-lg{
+
+.navbar-expand-lg {
     width: 100%;
 }
-.icones{
+
+.icones {
     margin-right: 1.5rem;
-    .material-symbols-outlined.bagshop{
+
+    .material-symbols-outlined.bagshop {
         padding-right: 2vh;
     }
 }
-.material-symbols-outlined{
+
+.material-symbols-outlined {
     color: var(--branco);
     font-size: 40px !important;
 }
+
 .logohome {
     width: 20%;
     margin-left: 1.5rem;
@@ -127,18 +133,20 @@ nav {
 }
 
 /* ---------------------------------------------------Tela Personalize ----------------------------------*/
-.back-video-container{
+.back-video-container {
     width: 100%;
     overflow-x: hidden;
 }
-.personalizetitle{
+
+.personalizetitle {
     font-family: var(--cinzel_fonte);
     color: var(--branco);
     font-size: 6vh;
     text-align: center;
-    padding-bottom: 11vh;
+    padding-bottom: 10vh;
 }
-.textpersonalize{
+
+.textpersonalize {
     color: var(--branco);
     font-family: var(--montserrat_fonte);
     width: 100vh;
@@ -147,33 +155,39 @@ nav {
     margin: auto;
     padding-bottom: 10vh;
 }
-.context{
+
+.context {
     position: relative;
     top: -100vh;
 }
-.bttexperimente{
+
+.bttexperimente {
     font-family: var(--cinzel_fonte);
     font-size: 2vh;
     font-weight: 900;
     display: flex;
     justify-content: center;
     text-decoration: none;
-    button{
+
+    button {
         width: 25vh;
         height: 6vh;
         border-radius: 0.45rem;
         border: none;
     }
 }
+
 /* Tela carrossel */
-#carousel{
+#carousel {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-content: center;
+    height: 100vh;
 }
-.telacarrossel{
-    background-color: var(--cinza_claro) ;
+
+.telacarrossel {
+    background-color: var(--cinza_claro);
     width: 80%;
     display: flex;
     justify-content: center;
@@ -182,55 +196,139 @@ nav {
     border-radius: 0.4rem;
     height: 70vh;
 }
-.telacarrossel2{
+
+.telacarrossel2 {
     display: flex;
     justify-content: center;
     align-items: center;
     align-content: center;
+    margin-bottom: 10vh;
 }
-.carousel-control-prev-icon{
-    background-image: url(../img/icons/anterior_carrossel.png)!important;
+
+.carousel-control-prev-icon {
+    background-image: url(../img/icons/anterior_carrossel.png) !important;
 }
-.carousel-control-next-icon{
-    background-image: url(../img/icons/proximo_carrossel.png)!important;
+
+.carousel-control-next-icon {
+    background-image: url(../img/icons/proximo_carrossel.png) !important;
 }
-.titulocursivo{
+
+
+.titulocursivo {
     font-family: var(--adventure_fonte);
     text-align: center;
-    font-size: 8rem;
+    margin-left: 0.7rem;
+    margin-right: 0.7rem;
+
+    h1 {
+        font-size: 7rem;
+    }
 }
-.carousel-item{
-    img{
+
+.carousel-item {
+    img {
         width: 5%;
     }
 }
-.titulocard{
+
+.titulocard {
     font-family: var(--cinzel_fonte);
     font-weight: 700;
     text-align: center;
 }
 
-.descricaocard{
+.descricaocard {
     font-family: var(--montserrat_fonte);
     text-align: center;
 }
-.botaocard{
+
+.botaocard {
     display: flex;
     justify-content: center;
     align-content: center;
-    
-    button{
-        border-radius:  0 30px  0 30px ;
+
+    button {
+        border-radius: 0 30px 0 30px;
         border-color: transparent;
         font-family: var(--montserrat_fonte);
         font-weight: 600;
         background-color: var(--amarelo_apagado);
         text-align: center;
         width: 10vh;
-        height:4.5vh;
+        height: 4.5vh;
     }
 }
+/*-----------------------------------------------------------------Feito com Amor---------------------------------------------------------------------*/
+.feitocomamor{
+    position: relative;
+    top: -54vh;
+    max-height: 48vh;
+}
+.feitocom,.enviadocom{
+    font-family: var(--adventure_fonte);
+    font-size: 6.5rem;
+    text-align: center;
+}
+.feitocom{
+    color: var(--vermelho_vivido);
+    padding-right: 30vh;
+}
+.enviadocom{
+    color: var(--verde_vivido);
+    position: relative;
+    bottom: 5.5vh;
+    padding-left: 15vh;
+}
+.lateral{
+    display: flex;
+    justify-content: end;
+    margin-right: 20vh;
+}
+.redsquare{
+    background-color: #891515;
+    height: 40vh;
+    width: 40vh;
+}
+.forno{
+    position: relative;
+    left: 29vh;
+    top: 5vh;
+    width: 40vh;
+}
+.feitotext{
+    font-family: var(--montserrat_fonte);
+    width: 95vh;
+    text-align: center;
+    font-size: 2vh;
+    margin-left: 15vh;
+    position: relative;
+    bottom: 40vh;
 
+}
+/* -------------------------------------------------------------Tela Avaliações----------------------------------------------------------- */
+#avaliacoes{
+    height: 110vh;
+    background: linear-gradient(90deg, var(--preto_acizentado), var(--preto));
+    overflow-x:hidden;
+}
+.tituloavaliacoes{
+    font-family: var(--cinzel_fonte);
+    font-size: 8rem;
+    text-align: center;
+    color: var(--branco);
+}
+.avaliacoes{
+    background-color: var(--cinza_claro);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    font-family: var(--montserrat_fonte);
+    h1{
+        font-weight: 600;
+    }
+}
 /*---------------------------------------------------------------------------TELA PHONES-------------------------------------------------------------------------------------- */
 
 @media only screen and (max-width: 600px) {
@@ -244,26 +342,33 @@ nav {
         background-position: center;
         overflow-x: hidden;
     }
-    .navbar-toggler{
+
+    .navbar-toggler {
         border: none !important;
     }
-    a.nav-link{
+
+    a.nav-link {
         font-size: 1.5vh;
     }
+
     .logohome {
         width: 50%;
         margin-left: 1.5rem;
     }
+
     .navbar-toggler-icon {
-        background-image: url(../img/icons/menu.svg)!important;
+        background-image: url(../img/icons/menu.svg) !important;
+        margin-top: 0.65rem
     }
-    .icones{
+
+    .icones {
         position: absolute;
         top: 2.4vh;
         right: 6vh;
-        .material-symbols-outlined.bagshop{
-        padding-right: 1vh;
-    }
+
+        .material-symbols-outlined.bagshop {
+            padding-right: 1vh;
+        }
     }
 
     .frase-inicial {
@@ -300,22 +405,27 @@ nav {
         text-align: center;
         margin-top: 2px;
     }
-    /*--------------------------------------Tela personalize phone------------------------- */
-    .personalize{
+
+    /*----------------------------------Tela personalize phone------------------------ */
+    .personalize {
         height: 70vh;
     }
-    .back-video-container{
-        max-width: 600px; ; 
+
+    .back-video-container {
+        max-width: 600px;
         overflow-x: hidden;
+
     }
-    .personalizetitle{
+
+    .personalizetitle {
         font-family: var(--cinzel_fonte);
         color: var(--branco);
         font-size: 4vh;
         text-align: center;
-        padding-bottom: 11vh;
+        padding-bottom: 9vh;
     }
-    .textpersonalize{
+
+    .textpersonalize {
         color: var(--branco);
         width: 80%;
         font-size: 2vh;
@@ -323,22 +433,43 @@ nav {
         margin: auto;
         padding-bottom: 10vh;
     }
-    .context{
+
+    .context {
         position: relative;
         top: -100vh;
     }
-    .bttexperimente{
-        font-family: var(--cinzel_fonte);
-        font-size: 2vh;
-        font-weight: 900;
+video{
+    transform: translateX(-90vh);
+}
+    /*-------------------------------------- Carrossel ------------------------- */
+    #carousel {
         display: flex;
+        flex-direction: column;
         justify-content: center;
-        text-decoration: none;
-        button{
-            width: 25vh;
-            height: 6vh;
-            border-radius: 0.45rem;
-            border: none;
+        align-content: center;
+        height: 110vh;
+    }
+
+    .telacarrossel {
+        width: 90%;
+
+        img {
+            width: 60%;
         }
     }
+
+    .carousel-inner {
+        position: relative;
+        width: 80%;
+        overflow: hidden;
+        left: 10%;
+    }
+/*---------------------------------------------feito com amor phone---------------------------------*/
+.feitocomamor{
+    position: relative;
+    top: 50vh;
+}
+.feitocom,.enviadocom{
+    font-size: 8vh;
+}
 }
