@@ -254,12 +254,15 @@ nav {
     .navbar-toggler-icon {
         background-image: url(../img/icons/menu.svg)!important;
     }
+    .icones{
+        position: absolute;
+        top: 2.2vh;
+        right: 6vh;
+        .material-symbols-outlined.bagshop{
+        padding-right: 1vh;
+    }
+    }
 
-    /* .frase-inicial {
-        margin: 0 auto;
-        left: 50%;
-        transform: translateX(-50%);
-    } */
     .frase-inicial {
         position: relative;
         top: 13vh;
