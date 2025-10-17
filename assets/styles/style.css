@@ -244,6 +244,9 @@ nav {
         background-position: center;
         overflow-x: hidden;
     }
+    .navbar-toggler{
+        border: none !important;
+    }
     a.nav-link{
         font-size: 1.5vh;
     }
@@ -256,7 +259,7 @@ nav {
     }
     .icones{
         position: absolute;
-        top: 2.2vh;
+        top: 2.4vh;
         right: 6vh;
         .material-symbols-outlined.bagshop{
         padding-right: 1vh;
@@ -300,23 +303,22 @@ nav {
     /*--------------------------------------Tela personalize phone------------------------- */
     .personalize{
         height: 70vh;
-        overflow:hidden;
     }
     .back-video-container{
-        width: 100%;
+        max-width: 600px; ; 
         overflow-x: hidden;
     }
     .personalizetitle{
         font-family: var(--cinzel_fonte);
         color: var(--branco);
-        font-size: 6vh;
+        font-size: 4vh;
         text-align: center;
         padding-bottom: 11vh;
     }
     .textpersonalize{
         color: var(--branco);
-        width: 100vh;
-        font-size: 3vh;
+        width: 80%;
+        font-size: 2vh;
         text-align: center;
         margin: auto;
         padding-bottom: 10vh;
