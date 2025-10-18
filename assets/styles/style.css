@@ -388,7 +388,20 @@ nav {
     }
 }
 /* ------------------------------------------------------------Tela Personalização------------------------------------------------------*/
+.imgbackpersonal{
+    width: 100%;
+}
 .backpersonal{
+    height: auto;
+}
+.backpersonal::before{
+     content: '';
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+  background-color: black;
+  opacity: 0.5; /* Ajuste o valor para a intensidade do filtro */
+  z-index: 1;
 }
 
 
