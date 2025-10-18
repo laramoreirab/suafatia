@@ -16,6 +16,7 @@
     --branco: #ffffff;
     --cinza_claro: #d9d9d9;
     --amarelo_apagado: #d2b27a;
+    --marrom: #4f260e;
     --cinzel_fonte: "Cinzel Decorative", serif;
     --adventure_fonte: "adventure", serif;
     --montserrat_fonte: "Montserrat", sans-serif;
@@ -359,6 +360,49 @@ nav {
     justify-content: center;
     align-content: center;
 }
+/* -------------------------------------------------------------Tela Nossos sabores----------------------------------------------------------- */
+#cardapio_home{
+    height: 120vh;
+}
+.cardapio_banner{
+    img{
+      border-radius: 0.4rem;        
+    }
+
+}
+.nossossabores{
+    z-index: 1000;
+    h1{
+        font-family: var(--cinzel_fonte);
+    }
+    p{
+        font-family: var(--montserrat_fonte);
+    }
+    button{
+        font-family: var(--montserrat_fonte);
+        font-weight: 600;
+        color: var(--marrom);
+        border: transparent;
+        background-color: var(--amarelo_apagado);
+        width: 50vh;
+    }
+}
+/* ------------------------------------------------------------Tela Personalização------------------------------------------------------*/
+.backpersonal{
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*---------------------------------------------------------------------------TELA PHONES-------------------------------------------------------------------------------------- */
 
