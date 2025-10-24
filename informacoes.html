@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informações do Produto</title>
+    <link rel="icon" href="assets/img/logo_invert.svg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@200" />
+    <script src="https://kit.fontawesome.com/167f6b34b8.js" crossorigin="anonymous"></script>
+</head>
+
+<body id="body_informacoes">
+    <!-- Header com Navbar-->
+    <header class="header">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html"><img src="assets/img/logo.png" alt="Logo"
+                        class="logohome headerlink"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link headerlink" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link headerlink" href="cardapio.html">Cardápio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link headerlink" href="personalizacao.html">Personalize</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="icones">
+                    <span class="material-symbols-outlined bagshop headerlink"><a href="carrinho.html"
+                            style="color: white; text-decoration: none;">local_mall</a></span>
+                    <span class="material-symbols-outlined headerlink"><a href="login.html"
+                            style="color: white; text-decoration: none;">account_circle</a></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <div class="img_informacoes">
+                    <img src="../assets/img/pizzamargueuritainformacoes.png">
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+                <div class="informacoes_produto">
+                    <h1 class="titulo_informacoes">Marguerita</h1>
+                    <p class="descricao_informacoes">Massa artesanal leve e crocante, coberta com molho de tomates San
+                        Marzano, mozzarella de búfala cremosa e folhas frescas de manjericão. Finalizada com azeite
+                        extravirgem e um toque de flor de sal, combina simplicidade e elegância em cada fatia.</p>
+                    <p class="preco_informacoes">R$ 64,90</p>
+                    <div class="linha_informacoes">
+                        <div class="quantidade-container">
+                            <button id="diminuir-btn" type="button">-</button>
+                            <input type="number" id="quantidade-input" value="1" min="1" max="50">
+                            <button id="aumentar-btn" type="button">+</button>
+                        </div>
+                        <button class="addcarrinho_informacoes"><i>Adicionar</i><span
+                                class="material-symbols-outlined bagshop">local_mall</span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="cards_interesses">
+        <h1 class="titulointeresses_informacoes">Você pode se interessar</h1>
+        <div class="container">
+            <div class="linhacard_cardapio">
+                <div class="row tll">
+                    <div class="col-12 col-md-3 jsss">
+                        <div class="card_cardapio">
+                            <span class="material-symbols-outlined bagshop">local_mall</span>
+                            <img src="../assets/img/pizzas/brocolis.svg" alt="Brocólis">
+                            <h1>Brocólis</h1>
+                            <p>R$ 59,70</p>
+                            <div class="botao_cardcardapio">
+                                <button><i>Peça Já!</i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-3 jsss">
+                        <div class="card_cardapio">
+                            <span class="material-symbols-outlined bagshop">local_mall</span>
+                            <img src="../assets/img/pizzas/alcachofras.svg" alt="Alcachofras">
+                            <h1>Alcachofras</h1>
+                            <p>R$ 59,70</p>
+                            <div class="botao_cardcardapio">
+                                <button><i>Peça Já!</i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-3 jsss">
+                        <div class="card_cardapio">
+                            <span class="material-symbols-outlined bagshop">local_mall</span>
+                            <img src="../assets/img/pizzas/shimeji.svg" alt="Shimeji">
+                            <h1>Shimeji</h1>
+                            <p>R$ 59,70</p>
+                            <div class="botao_cardcardapio">
+                                <button><i>Peça Já!</i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-3 jsss">
+                        <div class="card_cardapio">
+                            <span class="material-symbols-outlined bagshop">local_mall</span>
+                            <img src="../assets/img/pizzas/camarao.svg" alt="Camarão">
+                            <h1>Camarão</h1>
+                            <p>R$ 59,70</p>
+                            <div class="botao_cardcardapio">
+                                <button><i>Peça Já!</i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <!-- Footer -->
+    <div class="footer_fundo">
+        <div class="container">
+            <footer class="py-5">
+                <div class="row">
+                    <div class="col-6 col-md-2 mb-3">
+                        <div class="principal_footer">
+                            <img src="../assets/img/logo.png" style="width: 80%;">
+                            <p>O Seu Paladar no Comando</p>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-2 mb-3">
+                        <div class="socialmedia2">
+                            <ul class="nav flex-column">
+                                <div class="socialmedia">
+                                    <i class="fa-solid fa-phone"></i>
+                                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0">4002 -
+                                            8922</a></li>
+                                </div>
+                                <div class="socialmedia">
+                                    <i class="fa-brands fa-instagram"></i>
+                                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0">@suafatia</a></li>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-2 mb-3">
+                        <div class="redirecionamento_footer">
+                            <ul class="nav flex-column">
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Home</a></li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Cardápio</a>
+                                </li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Personalize</a></li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Contato</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-md-5 offset-md-1 mb-3">
+                        <form class="cadastro_lancamentos">
+                            <p>Cadastre-se para receber lançamentos de novos produtos e promoções!</p>
+                            <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                                <input id="newsletter1" type="email" placeholder="Email">
+                                <button type="button">Cadastre-se</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-sm-row justify-content-center py-4 my-4 border-top">
+                    <p>© 2025. Sua Fatia Pizzaria. Todos os direitos reservados.</p>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script>
+        // Obtém os elementos da página
+        const diminuirBtn = document.getElementById('diminuir-btn');
+        const aumentarBtn = document.getElementById('aumentar-btn');
+        const quantidadeInput = document.getElementById('quantidade-input');
+
+        // Adiciona um "ouvinte de evento" para o botão de aumentar
+        aumentarBtn.addEventListener('click', () => {
+            let valor = parseInt(quantidadeInput.value);
+            // Garante que o valor não exceda o máximo
+            if (valor < parseInt(quantidadeInput.max)) {
+                quantidadeInput.value = valor + 1;
+            }
+        });
+
+        // Adiciona um "ouvinte de evento" para o botão de diminuir
+        diminuirBtn.addEventListener('click', () => {
+            let valor = parseInt(quantidadeInput.value);
+            // Garante que o valor não seja menor que o mínimo
+            if (valor > parseInt(quantidadeInput.min)) {
+                quantidadeInput.value = valor - 1;
+            }
+        });
+    </script>
+</body>
+
+</html>

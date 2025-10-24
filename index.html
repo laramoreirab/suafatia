@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sua Fatia</title>
+    <link rel="icon" href="assets/img/logo_invert.svg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@200" />
+    <script src="https://kit.fontawesome.com/167f6b34b8.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Tela inicial -->
+    <section class="inicio">
+        <!-- Header com Navbar-->
+        <header class="header">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#"><img src="assets/img/logo.png" alt=Logo" class="logohome headerlink"></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link headerlink" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link headerlink" href="cardapio.html">Cardápio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link headerlink" href="personalizacao.html">Personalize</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="icones">
+                        <span class="material-symbols-outlined bagshop headerlink"><a href="carrinho.html" style="color: white; text-decoration: none;">local_mall</a></span>
+                        <span class="material-symbols-outlined headerlink"><a href="login.html" style="color: white; text-decoration: none;">account_circle</a></span>
+                    </div>
+                </div>
+            </nav>
+
+        </header>
+
+        <div class="frase-inicial">
+            <p class="slogan1">O <strong> Seu </strong> Paladar </p>
+            <p class="slogan2">no <strong> Comando</strong></p>
+        </div>
+    </section>
+    <section id="carousel">
+        <div class="titulocursivo">
+            <h1>Destaques da Semana</h1>
+        </div>
+        <div class="telacarrossel2">
+            <div class="telacarrossel">
+                <div class="container">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <!-- Slide 1 -->
+                            <div class="carousel-item active">
+                                <div class="row">
+                                    <div class="col-12 col-md-4 gg">
+                                        <img class="d-block w-100" src="../assets/img/pizzas/lombo.svg" alt="Lombo">
+                                        <h1 class="titulocard">Lombo</h1>
+                                        <p class="descricaocard">Lombo suíno, catupiry, cebola, queijo e orégano.</p>
+                                        <div class="botaocard">
+                                            <button><i>Peça Já!</i></button>
+                                        </div>
+                                    </div>
+                                    <hr class="linecarrossel">
+                                    <div class="col-12 col-md-4 d-none d-md-block gg">
+                                        <img class="d-block w-100" src="../assets/img/pizzas/toscana.svg" alt="Toscana">
+                                        <h1 class="titulocard">Toscana</h1>
+                                        <p class="descricaocard">Linguiça toscana, cebola, tomate, queijo, molho de tomate e azeitonas.</p>
+                                        <div class="botaocard">
+                                            <button><i>Peça Já!</i></button>
+                                        </div>
+                                    </div>
+                                    <hr class="linecarrossel">
+                                    <div class="col-12 col-md-4 d-none d-md-block gg">
+                                        <img class="d-block w-100" src="../assets/img/pizzas/pepperoni.svg"
+                                            alt="Peperoni">
+                                        <h1 class="titulocard">Pepperoni</h1>
+                                        <p class="descricaocard">Pepperoni fatiado, queijo mussarela, molho de tomate, orégano.</p>
+                                        <div class="botaocard">
+                                            <button><i>Peça Já!</i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Slide 2 -->
+                            <div class="carousel-item">
+                                <div class="row">
+                                    <div class="col-12 col-md-4 gg">
+                                        <img class="d-block w-100" width="50%" src="../assets/img/pizzas/frango.svg"
+                                            alt="Frango com Catupiry">
+                                        <h1 class="titulocard">Frango</h1>
+                                        <p class="descricaocard">Frango desfiado, catupiry, queijo, orégano e molho branco.</p>
+                                        <div class="botaocard">
+                                            <button><i>Peça Já!</i></button>
+                                        </div>
+                                    </div> 
+                                    <hr class="linecarrossel">
+                                    <div class="col-12 col-md-4 d-none d-md-block gg">
+                                        <img class="d-block w-100" src="../assets/img/pizzas/carneseca.svg"
+                                            alt="Carne Seca">
+                                        <h1 class="titulocard">Carne Seca</h1>
+                                        <p class="descricaocard">Carne seca, cebola caramelizada, pimentão e azeitona preta.</p>
+                                        <div class="botaocard">
+                                            <button><i>Peça Já!</i></button>
+                                        </div>
+                                    </div>
+                                    <hr class="linecarrossel">
+                                    <div class="col-12 col-md-4 d-none d-md-block gg">
+                                        <img class="d-block w-100" src="../assets/img/pizzas/quatroqueijos.svg"
+                                            alt="Quatro Queijos">
+                                        <h1 class="titulocard">4 Queijos</h1>
+                                        <p class="descricaocard">Mussarela, provolone, gorgonzola, parmesão, molho branco.</p>
+
+                                        <div class="botaocard">
+                                            <button><i>Peça Já!</i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="personalize">
+        <div class="back-video-container">
+            <video autoplay muted loop>
+                <source src="assets/img/home/videopersonalize.mp4" type="video/mp4">
+            </video>
+            <div class="context">
+                <h1 class="personalizetitle">Personalize</h1>
+                <p class="textpersonalize"><b>A pizza dos seus sonhos!</b> <br>
+                    Na <b>Sua Fatia</b>, a pizza é sua, do jeito que você sempre imaginou, você é o chef por trás de
+                    cada
+                    receita.
+                    O <b>comando</b> é todo seu: <b>escolha</b> os ingredientes, monte combinações únicas e
+                    <b>transforme</b> cada fatia em
+                    uma experiência e
+                    história <b>inesquecível</b>. Quer algo clássico, ousado, vegetariano ou surpreendente? Aqui,
+                    <b>tudo é
+                        possível</b>, sua pizza
+                    reflete seu estilo, seu gosto e sua imaginação. Você monta, nós <b>assamos com carinho</b> e
+                    <b>entregamos</b> uma
+                    experiência feita <b>sob
+                        medida</b> para o seu paladar, do seu jeito — com <b>personalidade, sabor</b> e muito
+                    <b>amor</b>.
+                </p>
+                <a href="personalizacao.html" class="bttexperimente"><button>- Experimente -</button></a>
+            </div>
+        </div>
+    </section>
+    <section id="feitocomamor">
+        <div class="container-fluid">
+            <h1 class="feitocom">Feito com Amor,</h1>
+            <h1 class="enviadocom">Enviado com carinho!</h1>
+            <div class="lateral">
+                <img src="assets/img/home/amor_img.png" alt="Imagem de Forno" class="forno">
+                <div class="redsquare"></div>
+            </div>
+            <p class="feitotext">
+                Na <b>Sua Fatia</b>, somos apaixonados por criar <b>experiências inesquecíveis</b> com pizza. Desde o
+                primeiro dia, nossa missão tem sido <b>reunir famílias e amigos</b> pelo amor às pizzas <b>saborosas</b>,
+                <b>feitas à mão</b> e criar <b>bons momentos</b>.<br><br>
+
+                Cada pizza que fazemos começa com os <b>melhores ingredientes</b> — da nossa <b>massa preparada na
+                hora</b> aos nossos <b>molhos exclusivos</b> e <b>coberturas premium</b>, temos algo para satisfazer
+                todos os desejos.<br><br>
+
+                Temos orgulho de entregar não apenas pizzas, mas também uma promessa de <b>experiência exclusiva</b>, de
+                <b>qualidade</b>, de <b>frescor</b> e de <b>rapidez</b>. Da primeira mordida à última fatia, 
+                queremos que cada momento seja especial. <b>Junte-se a nós</b> para celebrar a <b>magia da pizza</b>,
+                entregue <b>quentinha</b> direto na sua porta.
+
+            </p>
+        </div>
+    </section>
+    <section id="avaliacoes">
+        <div class="tituloavaliacoes">
+            <h1>O Que dizem nossos clientes?</h1>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-3 jsss">
+                    <div class="avaliacoes">
+                        <img src="../assets/img/home/luiza.svg" alt="Mulher Asiática Sorrindo">
+                        <h1 class="titulocard_avaliacoes">Luiza</h1>
+                        <div class="nota">
+                            <img src="../assets/img/home/cincoestrelas.svg" alt="Nota: 5 Estrelas" class="nota">
+                        </div>
+                        <p class="descricaocard_avaliacoes">Finalmente encontrei uma pizzaria que entende que pizza é
+                            arte! A liberdade que dão para a criação de sabores únicos me conquistou totalmente.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-3 jsss">
+                    <div class="avaliacoes">
+                        <img src="../assets/img/home/matheus.svg" alt="Homem Empresário Sorrindo">
+                        <h1 class="titulocard_avaliacoes">Matheus</h1>
+                        <div class="nota">
+                            <img src="../assets/img/home/quatropontocincoestrelas.svg" alt="Nota: 4.5 Estrelas"
+                                class="nota">
+                        </div>
+                        <p class="descricaocard_avaliacoes">Cada um aqui tem um gosto diferente, e a personalização
+                            salvou nosso jantar. Entrega rápida, ingredientes frescos e sem briga na mesa por causa de
+                            diferentes paladares!</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-3 jsss">
+                    <div class="avaliacoes">
+                        <img src="../assets/img/home/livia.svg" alt="Mulher Asiática Sorrindo">
+                        <h1 class="titulocard_avaliacoes">Lívia</h1>
+                        <div class="nota">
+                            <img src="../assets/img/home/quatroestrelas.svg" alt="Nota: 4 Estrelas" class="nota">
+                        </div>
+                        <p class="descricaocard_avaliacoes">Fiquei impressionada com a variedade de ingredientes
+                            veganos. A massa integral e o queijo vegetal estavam incríveis. Finalmente me senti
+                            incluída.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-3 jsss">
+                    <div class="avaliacoes">
+                        <img src="../assets/img/home/theo.svg" alt="Homem com cabelo curto e barba">
+                        <h1 class="titulocard_avaliacoes">Theo</h1>
+                        <div class="nota">
+                            <img src="../assets/img/home/cincoestrelas.svg" alt="Nota: 5 Estrelas" class="nota">
+                        </div>
+                        <p class="descricaocard_avaliacoes">A personalização é rápida e eficiente. Montei minha
+                            pizza no
+                            intervalo da reunião e chegou pontualmente. Excelente para quem vive correndo.</p>
+                    </div>
+                </div>
+
+            </div>
+    </section>
+
+    <section id="cardapio_home">
+        <div class="cardapio_banner">
+            <div class="nossossabores">
+                <h1>Nossos sabores</h1>
+                <p>Confira nossa seleção com mais<br> de 25 sabores!</p>
+                <a href="cardapio.html"><button>Acesse o cardápio</button></a>
+            </div>
+        </div>
+    </section>
+    <section id="contato">
+        <h1>Contate-nos</h1>
+        <p>Descreva o motivo do seu contato no formulário e retornaremos<br> o
+            mais breve possível. Queremos garantir que sua experiência<br> com a
+            Sua Fatia seja sempre a melhor possível.</p>
+        <div class="container_form">
+            <form action="#" method="post">
+                <label>Nome completo</label>
+                <div class="input_form">
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-6">
+                            <label>Email</label>
+                            <div class="input_form">
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <label>Telefone</label>
+                            <div class="input_form">
+                                <input type="tel" id="telefone" name="telefone"
+                                    pattern="^\(?[1-9]{2}\)?\s?(9[1-9][0-9]{3})\-?[0-9]{4}$" required>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <label>Mensagem</label>
+                <textarea name="mensagem" id="mensagem" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
+    <!-- Footer -->
+    <div class="footer_fundo">
+        <div class="container">
+            <footer class="py-5">
+                <div class="row">
+                    <div class="col-6 col-md-2 mb-3 ">
+                        <div class="principal_footer">
+                            <img src="../assets/img/logo.png" style="width: 80%;">
+                            <p>O Seu Paladar no Comando</p>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-2 mb-3">
+                        <div class="socialmedia2">
+                            <ul class="nav flex-column">
+                                <div class="socialmedia">
+                                    <i class="fa-solid fa-phone"></i>
+                                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0">4002 -
+                                            8922</a></li>
+                                </div>
+                                <div class="socialmedia">
+                                    <i class="fa-brands fa-instagram"></i>
+                                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0">@suafatia</a></li>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-2 mb-3">
+                        <div class="redirecionamento_footer">
+                            <ul class="nav flex-column">
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Home</a></li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Cardápio</a>
+                                </li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Personalize</a></li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Contato</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-md-5 offset-md-1 mb-3">
+                        <form class="cadastro_lancamentos">
+                            <p>Cadastre-se para receber lançamentos de novos produtos e promoções!</p>
+                            <div class="d-flex flex-column flex-sm-row w-100 gap-2 tllj">
+                                <input id="newsletter1" type="email" placeholder="Email">
+                                <button type="button">Cadastre-se</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-sm-row justify-content-center py-4 my-4 border-top tlls">
+                    <p>© 2025. Sua Fatia Pizzaria. Todos os direitos reservados.</p>
+                </div>
+
+            </footer>
+        </div>
+    </div>
+
+</body>
+
+</html>

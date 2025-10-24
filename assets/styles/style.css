@@ -1,0 +1,2579 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Determinando variáveis*/
+:root {
+    --vermelho_escuro: #891515;
+    --vermelho_vivido: #d40101;
+    --verde_vivido: #2c8909;
+    --verde_apagado: #478059;
+    --preto: #000;
+    --pretoheader: #0000004b;
+    --preto_acizentado: #2b2b2b;
+    --branco: #ffffff;
+    --cinza_claro: #d9d9d9;
+    --cinza_clarinho: #b4b4b4;
+    --amarelo_apagado: #d2b27a;
+    --amarelo_meioapagado: #cdae78;
+    --marrom: #4f260e;
+    --cinzel_fonte: "Cinzel Decorative", serif;
+    --adventure_fonte: "adventure", serif;
+    --montserrat_fonte: "Montserrat", sans-serif;
+}
+
+@font-face {
+    font-family: "adventure";
+    src: url('../fontes/adventures-unlimited-script-regular-maisfontes.14f6/adventures-unlimited-script-regular.otf') format('opentype');
+}
+
+/* --------------------------------------------------- Header ----------------------------------*/
+header {
+    background-color: var(--pretoheader);
+    position: fixed;
+    display: flex;
+    z-index: 1000;
+    width: 100%;
+}
+
+nav {
+    .nav-item {
+        padding-right: 4vh;
+        padding-left: 4vh;
+
+        a {
+            color: #ffffff;
+        }
+
+        font-family: var(--cinzel_fonte);
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+
+    .container-fluid {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        width: 100%;
+    }
+}
+
+.navbar-brand {
+    width: 35%;
+}
+
+.navbar-expand-lg {
+    width: 100%;
+}
+
+.icones {
+    margin-right: 1.5rem;
+
+    .material-symbols-outlined.bagshop {
+        padding-right: 2vh;
+    }
+}
+
+.material-symbols-outlined {
+    color: var(--branco);
+    font-size: 40px !important;
+}
+
+.logohome {
+    width: 20%;
+    margin-left: 1.5rem;
+}
+
+.headerlink {
+    transition: 0.5s ease;
+}
+
+.headerlink:hover {
+    transition: 0.5s ease;
+    transform: scale(1.1);
+    color: var(--branco);
+}
+
+/* --------------------------------------------------- Tela Inicial ----------------------------------*/
+.inicio {
+    height: 100vh;
+    background-image: url(../img/home/bghome.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+.frase-inicial {
+    position: absolute;
+    top: 22vh;
+    display: grid;
+    width: 105vh;
+    margin: 0 auto;
+    left: 35%;
+    transform: translateX(-50%);
+    align-items: center;
+}
+
+.slogan1 {
+    font-family: var(--adventure_fonte);
+    color: var(--branco);
+    font-size: 10rem;
+    text-align: start;
+    font-weight: 570;
+    word-spacing: 0.5rem;
+
+    strong {
+        color: var(--verde_vivido);
+        font-weight: 590;
+    }
+}
+
+.slogan2 {
+    font-family: var(--adventure_fonte);
+    color: var(--branco);
+    font-size: 10rem;
+    text-align: end;
+    margin-top: -9rem;
+    font-weight: 570;
+    word-spacing: 0.5rem;
+
+    strong {
+        color: var(--vermelho_vivido);
+        font-weight: 590;
+    }
+}
+
+
+
+/* --------------------------------------------------- Personalize ----------------------------------*/
+.back-video-container {
+    width: 100%;
+    overflow: hidden;
+    min-height: auto;
+    position: relative;
+    height: 100vh;
+}
+
+.personalizetitle {
+    font-family: var(--cinzel_fonte);
+    color: var(--branco);
+    font-size: 6vh;
+    text-align: center;
+    padding-bottom: 10vh;
+    padding-top: 10vh;
+}
+
+.textpersonalize {
+    color: var(--branco);
+    font-family: var(--montserrat_fonte);
+    width: 100vh;
+    font-size: 2.8vh;
+    text-align: center;
+    margin: auto;
+    padding-bottom: 10vh;
+}
+
+.context {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+.bttexperimente {
+    font-family: var(--cinzel_fonte);
+    font-size: 2vh;
+    font-weight: 900;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+
+    button {
+        width: 25vh;
+        height: 6vh;
+        border-radius: 0.45rem;
+        border: none;
+    }
+}
+
+.bttexperimente:hover {
+    transform: scale(1.1);
+    transition: 1s ease;
+}
+
+/* Tela carrossel */
+#carousel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    height: 100vh;
+}
+
+.telacarrossel {
+    background-color: var(--cinza_claro);
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    border-radius: 0.4rem;
+    height: 70vh;
+}
+
+.telacarrossel2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin-bottom: 10vh;
+}
+
+.carousel-control-prev-icon {
+    background-image: url(../img/icons/anterior_carrossel.png) !important;
+}
+
+.carousel-control-next-icon {
+    background-image: url(../img/icons/proximo_carrossel.png) !important;
+}
+
+.titulocursivo {
+    font-family: var(--adventure_fonte);
+    text-align: center;
+    margin-left: 0.7rem;
+    margin-right: 0.7rem;
+
+    h1 {
+        font-size: 7rem;
+    }
+}
+
+.carousel-item {
+    img {
+        width: 5%;
+    }
+}
+
+.titulocard {
+    font-family: var(--cinzel_fonte);
+    font-weight: 700;
+    text-align: center;
+}
+
+.descricaocard {
+    font-family: var(--montserrat_fonte);
+    text-align: center;
+}
+.linecarrossel {
+  width: 100px; /* comprimento da linha */
+  height: 2px;  /* espessura da linha */
+  background-color: #ccc;
+  transform: rotate(90deg);
+  margin: auto 5px;
+} 
+.gg{
+    width: 30vh;
+}
+.botaocard { 
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+    button {
+        border-radius: 0 30px 0 30px;
+        border-color: transparent;
+        font-family: var(--montserrat_fonte);
+        font-weight: 600;
+        background-color: var(--amarelo_apagado);
+        text-align: center;
+        width: 10vh;
+        height: 4.5vh;
+    }
+}
+
+.botaocard:hover {
+
+    button {
+        transform: scale(1.1);
+        transition: 1s ease;
+    }
+
+}
+
+/*----------------------------------------------------------------- Feito com Amor ---------------------------------------------------------------------*/
+#feitocomamor {
+    margin-top: 16vh;
+    height: 100vh;
+    background-color: var(--branco);
+}
+
+.feitocom,
+.enviadocom {
+    font-family: var(--adventure_fonte);
+    font-size: 6.5rem;
+    text-align: center;
+}
+
+.feitocom {
+    color: var(--vermelho_vivido);
+    padding-right: 30vh;
+}
+
+.enviadocom {
+    color: var(--verde_vivido);
+    position: relative;
+    bottom: 5.5vh;
+    padding-left: 15vh;
+}
+
+.lateral {
+    display: flex;
+    justify-content: end;
+    margin-right: 20vh;
+}
+
+.redsquare {
+    background-color: #891515;
+    height: 40vh;
+    width: 40vh;
+}
+
+.forno {
+    position: relative;
+    left: 29vh;
+    top: 5vh;
+    width: 40vh;
+}
+
+.feitotext {
+    font-family: var(--montserrat_fonte);
+    width: 88vh;
+    text-align: center;
+    font-size: 2vh;
+    margin-left: 10vh;
+    position: relative;
+    bottom: 40vh;
+
+    b {
+        color: #716f6f;
+        font-weight: 600;
+    }
+}
+
+/* ------------------------------------------------------------- Avaliações ----------------------------------------------------------- */
+#avaliacoes {
+    height: 98vh;
+    background: linear-gradient(90deg, var(--preto_acizentado), var(--preto));
+    overflow-x: hidden;
+}
+
+.tituloavaliacoes {
+    font-family: var(--cinzel_fonte);
+    font-size: 8rem;
+    text-align: center;
+    color: var(--branco);
+    margin-top: 5rem;
+}
+
+.avaliacoes {
+    background-color: var(--cinza_claro);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    font-family: var(--montserrat_fonte);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    margin-top: 2.5rem;
+    width: 50vh;
+    height: 55vh;
+
+    h1 {
+        font-weight: 600;
+        font-size: 1.5rem;
+    }
+}
+
+.jsss {
+    gap: 20px;
+    display: flex !important;
+    justify-content: center;
+    align-content: center;
+}
+
+.nota {
+    img {
+        width: 55%;
+    }
+
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+/* ------------------------------------------------------------- Nossos sabores----------------------------------------------------------- */
+#cardapio_home {
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+}
+
+.cardapio_banner {
+    margin-top: 15vh;
+    background-image: url(../img/home/cardapio.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow-x: hidden;
+    border-radius: 1.5rem;
+    width: 80%;
+    height: 45vh;
+    overflow-y: hidden;
+}
+
+.nossossabores {
+    margin-top: 23vh;
+    z-index: 1;
+    left: 13%;
+    transform: translateY(-50%);
+    padding: 1rem;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin-right: 80vh;
+
+    h1 {
+        font-family: var(--cinzel_fonte);
+        color: var(--branco);
+        font-weight: 650;
+        width: 50vh;
+        text-align: center;
+    }
+
+    p {
+        font-family: var(--montserrat_fonte);
+        color: var(--branco);
+        text-align: center;
+    }
+
+    button {
+        font-family: var(--montserrat_fonte);
+        font-weight: 700;
+        color: var(--marrom);
+        border: transparent;
+        background-color: var(--amarelo_apagado);
+        width: 23vh;
+        height: 6vh;
+        border-radius: 0.4rem;
+    }
+}
+
+.nossossabores button:hover {
+    background-color: var(--marrom);
+    color: var(--amarelo_apagado);
+    transition: 1s;
+}
+
+/* ------------------------------------------------------------ Personalização ------------------------------------------------------*/
+.imgbackpersonal {
+    width: 100%;
+}
+
+.backpersonal {
+    height: auto;
+    overflow-x: hidden;
+}
+
+.criesuaobra {
+    font-family: var(--adventure_fonte);
+    font-size: 25vh;
+    position: relative;
+    bottom: 65vh;
+    text-align: center;
+    color: var(--branco);
+    z-index: 2;
+}
+
+.borda-superior {
+    position: relative;
+    width: 95%;
+    min-height: 30vh;
+    background-color: var(--branco);
+    z-index: 2;
+    border-radius: 20px 20px 0 0;
+}
+
+.container-personalizacao {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+}
+
+.contpizza {
+    position: relative;
+    bottom: 80vh;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+}
+
+.pizzapersonalizada {
+    width: 40%;
+}
+
+.container-fluid.cont-passospersona {
+    position: relative;
+    bottom: 65vh;
+    padding-left: 25vh;
+    padding-right: 25vh;
+
+    h5 {
+        font-family: var(--montserrat_fonte);
+    }
+
+    h3 {
+        font-family: var(--montserrat_fonte);
+    }
+
+    h4 {
+        font-family: var(--montserrat_fonte);
+    }
+
+    li {
+        font-family: var(--montserrat_fonte);
+    }
+
+    ul {
+        list-style-type: none;
+    }
+
+    .alignbtt {
+        padding-top: 5vh;
+    }
+
+    .btt-style {
+        font-family: var(--montserrat_fonte);
+        width: 27vh;
+        height: 9vh;
+        border-radius: 0.5rem;
+        border: none;
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.212);
+        background-color: #fcfcfc;
+        font-size: 2.3vh;
+        margin-right: 6vh;
+        transition: .3s;
+        margin-bottom: 6vh;
+    }
+
+    .btt-style:hover {
+        transform: scale(1.05);
+        background-color: #ffde59ce;
+    }
+
+    .btt-style-cancel {
+        font-family: var(--montserrat_fonte);
+        color: #878787;
+        width: 27vh;
+        height: 9vh;
+        border-radius: 0.5rem;
+        border: none;
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.212);
+        background-color: #e6e6e6;
+        font-size: 2.3vh;
+        margin-right: 6vh;
+        transition: .3s;
+        margin-bottom: 6vh;
+    }
+
+    .btt-style-cancel:hover {
+        background-color: #d1d1d1;
+        transform: scale(1.05);
+    }
+
+    p {
+        font-family: var(--montserrat_fonte);
+    }
+
+    .passo {
+        padding-top: 7vh;
+    }
+
+    .infosfinais {
+        padding-top: 7vh;
+
+        textarea {
+            padding-left: 10px;
+            padding-top: 10px;
+            width: 65vh;
+            height: 20vh;
+            border-radius: 0.4rem;
+            resize: none;
+            outline: none;
+        }
+    }
+
+    .observacoes {
+        resize: none;
+        width: 50vh;
+        height: 50vh;
+    }
+
+    .addcarrinho {
+        font-family: var(--montserrat_fonte);
+        width: 40vh;
+        height: 7vh;
+        border-radius: 0.5rem;
+        border: none;
+        background-color: #e6e6e6;
+        font-size: 2.3vh;
+        transition: .3s;
+        margin-top: 7vh;
+    }
+
+    .addcarrinho:hover {
+        background-color: #d1d1d1;
+        transform: scale(1.05);
+    }
+
+    .alinhabtt {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+/*---------------------------------------------------------- Carrinho ----------------------------------------*/
+.cont-carrinho {
+    position: relative;
+    top: 18vh;
+    padding-left: 7vh;
+
+    a {
+        text-decoration: none;
+        font-family: var(--montserrat_fonte);
+    }
+
+    h2 {
+        padding-top: 7vh;
+        font-family: var(--montserrat_fonte);
+    }
+}
+
+.container-fluid.carrinho {
+    display: flex;
+    justify-content: space-between;
+
+    h5,
+    h6,
+    h4 {
+        font-family: var(--montserrat_fonte);
+        margin-bottom: 0 !important;
+    }
+
+    h6 {
+        margin-bottom: 0 !important;
+    }
+}
+.voltarcarrinho{
+    text-decoration: none;
+    font-family: var(--montserrat_fonte);
+    color: var(--preto);
+}
+.contcompras {
+    padding-top: 7vh;
+    width: 160vh;
+}
+
+.produtos {
+    display: flex;
+    align-items: center;
+    gap: 6vh;
+}
+
+.qtdprodutos {
+    display: flex;
+    align-items: center;
+    gap: 3vh;
+}
+
+.quantidadeprod {
+    margin-bottom: 0 !important;
+}
+
+.imgproduto {
+    width: 30vh;
+    height: 20vh;
+}
+
+.detalhes {
+    padding-top: 5vh;
+    padding-bottom: 7vh;
+
+    h5 {
+        padding-bottom: 1vh;
+    }
+
+    p {
+        margin-bottom: 0 !important;
+        font-family: var(--montserrat_fonte);
+        font-size: 2vh;
+        color: #8f8f8f;
+        padding-left: 2vh;
+    }
+}
+
+.lineproduto {
+    width: 80%;
+    color: #8a8a8a93 !important;
+    opacity: 1 !important;
+    margin: auto;
+}
+
+.prelineresumo {
+    display: none;
+}
+
+.resumo {
+    display: flex;
+    justify-content: center;
+}
+
+.cont-resumo {
+    padding-right: 7vh;
+    width: 50vh;
+}
+
+.context-resumo {
+    display: flex;
+    justify-content: space-between;
+}
+
+.context-resumo {
+    p {
+        font-family: var(--montserrat_fonte);
+        font-size: 2vh;
+        margin: 0;
+    }
+}
+
+.total,
+.precototal {
+    font-size: 2.5vh !important;
+}
+
+.subtotal,
+.nomeprod,
+.textfrete {
+    color: #8f8f8f;
+}
+
+.textfrete,
+.precofrete {
+    padding-top: 5vh;
+    margin-bottom: 1vh;
+}
+
+.line2resumo {
+    opacity: 1;
+    margin-bottom: 3vh;
+}
+
+.continuarcompra {
+    display: flex;
+    justify-content: center;
+}
+
+.continuar {
+    margin-top: 5vh;
+    width: 100%;
+    border-radius: 0.5rem;
+    border: none;
+    background-color: #bdbdbd;
+    height: 7vh;
+    color: var(--branco);
+    font-weight: 600;
+}
+
+.separacao {
+    height: 45vh;
+    background-color: #8a8a8a93;
+    width: 0.5px;
+    margin-right: 8vh;
+}
+
+/* -------------------------------------------------------------- Endereço --------------------------------------------------------------- */
+
+.cont-endereco {
+    top: 15vh;
+    padding-left: 7vh;
+    padding-right: 7vh;
+    position: absolute;
+    width: 100%;
+
+    a {
+        text-decoration: none;
+        font-family: var(--montserrat_fonte);
+        color: var(--preto);
+    }
+
+    h2 {
+        font-family: var(--montserrat_fonte);
+        padding-top: 5vh;
+    }
+}
+
+.container-fluid.endereco {
+    padding-top: 4vh;
+
+    h6 {
+        font-family: var(--montserrat_fonte);
+        font-size: 2.3vh;
+        padding-top: 1vh;
+    }
+
+    label {
+        font-family: var(--montserrat_fonte);
+        font-size: 2.3vh;
+    }
+
+    input {
+        font-family: var(--montserrat_fonte);
+        font-size: 2.3vh;
+        width: 70%;
+        height: 4.2vh;
+        border-radius: 0.4rem;
+        border-color: var(--preto);
+        border-width: 0.2vh;
+        padding-left: 1vh;
+        color: var(--preto);
+        margin-top: 0.5vh;
+    }
+
+    .salvar-endereco {
+        width: 30%;
+        border-radius: 0.4rem;
+        font-family: var(--montserrat_fonte);
+        border: none;
+        height: 5.5vh;
+        font-size: 2.3vh;
+        margin-top: 3vh;
+        margin-bottom: 7vh;
+        color: #716f6f;
+    }
+}
+
+.input-cep {
+    width: 53% !important;
+}
+
+.alignbtt {
+    display: flex;
+    justify-content: center;
+}
+
+
+/* --------------------------------------------------------------- Tela de Pagamento--------------------------------------------------------------*/
+
+.cont-pagamento {
+    position: relative;
+    top: 15vh;
+    padding-left: 7vh;
+    padding-right: 7vh;
+
+    a {
+        text-decoration: none;
+        font-family: var(--montserrat_fonte);
+        color: var(--preto);
+    }
+
+    h2 {
+        font-family: var(--montserrat_fonte);
+        padding-top: 5vh;
+    }
+}
+
+.container-fluid.pagamento {
+    padding-top: 4vh;
+
+    h6 {
+        font-family: var(--montserrat_fonte);
+        font-size: 2.3vh;
+        padding-top: 1vh;
+        padding-bottom: 3vh;
+    }
+
+    select {
+        width: 30%;
+        margin-bottom: 2vh;
+        font-family: var(--montserrat_fonte);
+        border-color: var(--preto);
+    }
+
+    label {
+        font-family: var(--montserrat_fonte);
+    }
+
+    input {
+        font-family: var(--montserrat_fonte);
+        width: 40%;
+        margin-bottom: 3vh;
+        height: 4.2vh;
+        border-radius: 0.4rem;
+        border-color: var(--preto);
+        border-width: 0.2vh;
+        padding-left: 2vh;
+        font-size: 2.3vh;
+    }
+
+    img {
+        width: 15vh;
+    }
+
+    .salvar-pagamento {
+        width: 30%;
+        border-radius: 0.4rem;
+        font-family: var(--montserrat_fonte);
+        border: none;
+        height: 5.5vh;
+        font-size: 2.3vh;
+        margin-top: 3vh;
+        margin-bottom: 7vh;
+        color: #716f6f;
+    }
+}
+
+
+/* ------------------------------------------------------------- Contato ----------------------------------------------------------- */
+#contato {
+    margin-top: 9vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+
+
+    h1 {
+        font-family: var(--cinzel_fonte);
+        font-weight: 700;
+        text-align: center;
+        color: var(--preto);
+    }
+
+    p {
+        text-align: center;
+        font-family: var(--montserrat_fonte);
+        color: var(--preto);
+    }
+}
+
+
+.container_form {
+    width: 60vh;
+    height: 50vh;
+    margin-top: 8vh;
+    background-color: var(--branco);
+    border-radius: 1rem;
+    box-shadow:
+        0 10px 15px -3px rgba(0, 0, 0, 0.25),
+        0 4px 6px -4px rgba(0, 0, 0, 0.1);
+    padding: 3rem;
+
+    input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        border: 0.5px solid var(--preto);
+        border-radius: 0.8rem;
+        box-sizing: border-box;
+        font-family: var(--montserrat_fonte);
+        margin-bottom: 0.5rem;
+    }
+
+    input[type="email"],
+    input[type="tel"] {
+        padding: 10px;
+        width: 100%;
+        border: 1px solid var(--preto);
+        border-radius: 0.8rem;
+        box-sizing: border-box;
+        font-family: var(--montserrat_fonte);
+        width: 100%;
+    }
+
+    label {
+        font-family: var(--montserrat_fonte);
+        font-weight: 650;
+    }
+
+    textarea {
+        width: 95%;
+        padding: 10px;
+        border: 0.5px solid var(--preto);
+        border-radius: 0.8rem;
+        box-sizing: border-box;
+        font-size: 1em;
+        resize: none;
+        height: 150px;
+        margin-top: 5px;
+        margin-bottom: 40px;
+    }
+
+    button[type="submit"] {
+        display: block;
+        width: 150px;
+        padding: 10px;
+        background-color: var(--cinza_clarinho);
+        color: var(--branco);
+        font-family: var(--montserrat_fonte);
+        font-weight: 700;
+        border: none;
+        border-radius: 5px;
+        font-size: 1.1em;
+        cursor: pointer;
+        margin: 0 auto;
+        transition: background-color 0.3s;
+    }
+}
+
+.input_form {
+    padding-right: 2rem;
+
+}
+
+.container_form .container {
+    display: flex;
+    flex-wrap: nowrap;
+    margin: -5px 0 5px 0;
+}
+
+.container_form .col-6 {
+    width: 100%;
+    box-sizing: border-box;
+    margin-left: 0.4rem;
+    margin-bottom: 0;
+}
+
+.container_form .container .row:first-child .col-6 {
+    padding-left: 0;
+}
+
+.container_form .container .row:nth-child(2) .col-6 {
+    padding-right: 0;
+}
+
+.container_form button[type="submit"]:hover {
+    background-color: #777676;
+}
+
+/*--------------------------------------------------------------------------- Cardápio -------------------------------------------------------------------------------------- */
+#body_cardapio {
+    background-image: url(../img/cardapio/bgdesktopcardapio.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+.titulo_cardapio {
+    text-align: center;
+    color: var(--verde_vivido);
+    padding-top: 15vh;
+    font-family: var(--adventure_fonte);
+    font-size: 8rem;
+    font-weight: 550;
+}
+
+.subtitulo_cardapio {
+    text-align: center;
+    font-family: var(--montserrat_fonte);
+    color: var(--branco);
+    margin-top: -2rem;
+}
+
+.barradepesquisa_cardapio {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.search_container {
+    display: flex;
+    overflow: hidden;
+    margin-bottom: 8vh;
+
+    input {
+        padding-left: 10px;
+        width: 100vh;
+        height: 5vh;
+        border-radius: 25px 0 0 25px;
+        background-color: var(--branco);
+        border-right: none;
+        outline: none;
+        margin: 0;
+        border: none;
+    }
+
+    input::placeholder {
+        font-family: var(--montserrat_fonte);
+        font-weight: 450;
+        color: var(--preto);
+        font-size: 1.1rem;
+    }
+
+    button {
+        width: 10vh;
+        height: 5vh;
+        font-size: 1.5rem;
+        border-radius: 0 25px 25px 0;
+        border: none;
+        background-color: var(--branco);
+        outline: none;
+        margin: 0;
+        border-left: none;
+    }
+
+    i {
+        color: var(--preto);
+    }
+}
+
+.linhacard_cardapio {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.card_cardapio {
+    position: relative;
+    background-color: var(--cinza_claro);
+    width: 30vh;
+    height: 38vh;
+    margin-bottom: 5vh;
+    margin-right: 2vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.8rem;
+
+    h1 {
+        font-family: var(--cinzel_fonte);
+        font-size: 2rem;
+        font-weight: 600;
+        color: var(--preto);
+    }
+
+    p {
+        font-family: var(--cinzel_fonte);
+        font-weight: 600;
+        font-size: 1.5rem;
+        color: var(--amarelo_meioapagado);
+    }
+
+    img {
+        width: 60%;
+    }
+
+    button {
+
+        background-color: transparent;
+        border-radius: 15px;
+        width: 10vh;
+        height: 4vh;
+        outline: none;
+        border: 2px solid var(--amarelo_meioapagado);
+        font-weight: 500;
+
+    }
+
+    span {
+        position: absolute;
+        top: 1vh;
+        left: 1vh;
+        color: var(--preto);
+        display: flex;
+        cursor: pointer;
+
+    }
+}
+
+/* ------------------------------------------------------------ Login ------------------------------------------------------*/
+#body_login {
+    background-image: url(../img/login/bgdesktoplogin.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.titulologin {
+    font-family: var(--adventure_fonte);
+    color: var(--verde_vivido);
+    text-align: center;
+    font-size: 8rem;
+    margin-bottom: 1vh;
+}
+
+.containerLogin {
+    position: absolute;
+    right: 30vh;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.form_login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.input_login {
+    display: flex;
+    flex-direction: column;
+    color: var(--branco);
+
+    input {
+        background-color: transparent;
+        border: 1px solid var(--branco);
+        border-radius: 0.4rem;
+        height: 6vh;
+        width: 45vh;
+        margin-bottom: 1rem;
+        padding-left: 10px;
+        outline: none;
+        color: var(--branco);
+        font-family: var(--montserrat_fonte);
+    }
+
+    input::placeholder {
+        font-family: var(--montserrat_fonte);
+        color: var(--branco);
+    }
+}
+
+#input1_login {
+    margin-bottom: 2.5rem;
+}
+
+.esqueceusenha {
+    text-align: left !important;
+    margin-left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+
+    p {
+        font-family: var(--montserrat_fonte);
+        color: var(--branco);
+        text-align: left !important;
+        margin-left: 0;
+    }
+
+    a {
+        text-decoration: none;
+        margin-left: 4px;
+        font-weight: 600;
+    }
+}
+
+#naotemconta {
+    width: 100%;
+    text-align: center !important;
+    display: flex;
+    justify-content: center;
+
+    p {
+        font-family: var(--montserrat_fonte);
+        color: var(--branco);
+        text-align: center !important;
+        margin-left: 0;
+    }
+
+    a {
+        text-decoration: none;
+        margin-left: 4px;
+        font-weight: 600;
+    }
+}
+
+.entrar_login {
+    background-color: var(--vermelho_escuro);
+    width: 14vh;
+    height: 5vh;
+    color: var(--branco);
+    border: transparent;
+    border-radius: 0.4rem;
+    font-family: var(--montserrat_fonte);
+    font-weight: 650;
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+}
+
+.continuecom {
+    color: var(--branco);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    hr {
+        width: 12vh;
+    }
+
+    p {
+        font-family: var(--montserrat_fonte);
+        margin-top: 10px;
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+}
+
+.icones_login {
+    text-align: center;
+    margin-bottom: 1rem;
+
+    i {
+        color: var(--branco);
+        font-size: 2.5rem;
+        margin-top: 1rem;
+
+    }
+}
+
+/* ------------------------------------------------------------ Cadastro ------------------------------------------------------*/
+#body_cadastro {
+    background-image: url(../img/cadastro/bgdesktopcadastro.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.containerCadastro {
+    position: absolute;
+    left: 15%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.form_cadastro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.boxInputeIcon {
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--branco);
+    margin: 2rem;
+    height: 5vh;
+    width: 40vh;
+    border-radius: 0.6rem;
+
+    i {
+        color: var(--branco);
+        padding-left: 10px;
+    }
+
+    input {
+        border: transparent;
+        background-color: transparent;
+        margin-left: 20px;
+        outline: none;
+        font-family: var(--montserrat_fonte);
+        color: var(--branco);
+    }
+
+    input::placeholder {
+        font-family: var(--montserrat_fonte);
+        color: white;
+    }
+}
+
+.checkbox_cadastro {
+    input[type="checkbox"] {
+        accent-color: var(--cinza_claro);
+        outline: none;
+    }
+
+    input[type="checkbox"]:checked {
+        background-color: #2b2b2b;
+        border-color: #2b2b2b;
+        outline: none;
+    }
+
+    label {
+        color: var(--branco);
+        font-family: var(--montserrat_fonte);
+    }
+}
+
+.cadastrese_login {
+    background-color: var(--vermelho_escuro);
+    width: 16vh;
+    height: 5vh;
+    color: var(--branco);
+    border: transparent;
+    border-radius: 0.4rem;
+    font-family: var(--montserrat_fonte);
+    font-weight: 650;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+#jatemconta {
+    width: 100%;
+    text-align: center !important;
+    display: flex;
+    justify-content: center;
+
+    p {
+        font-family: var(--montserrat_fonte);
+        color: var(--branco);
+        text-align: center !important;
+        margin-left: 0;
+    }
+
+    a {
+        text-decoration: none;
+        margin-left: 4px;
+        font-weight: 600;
+    }
+}
+
+/* ------------------------------------------------------------ Informações ------------ ------------------------------------------*/
+#body_informacoes {
+    background-image: url(../img/cardapio/bgdesktopcardapio.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.img_informacoes {
+    margin-top: 25vh;
+}
+
+.informacoes_produto {
+    margin: 30vh 1rem 5rem 1rem;
+
+}
+
+.titulo_informacoes {
+    color: var(--branco);
+    font-family: var(--cinzel_fonte);
+    font-weight: 600;
+}
+
+.descricao_informacoes {
+    font-family: var(--montserrat_fonte);
+    color: var(--branco);
+}
+
+.preco_informacoes {
+    color: var(--verde_apagado);
+    font-family: var(--montserrat_fonte);
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+
+.linha_informacoes {
+    display: flex;
+    gap: 30px;
+}
+
+.quantidade-container {
+    background-color: var(--branco);
+    display: flex;
+    font-family: var(--montserrat_fonte);
+    font-weight: 700;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    border-radius: 0.4rem;
+    border: transparent;
+    height: 5vh;
+    outline: none;
+
+    button {
+        border: transparent;
+        background-color: transparent;
+        color: var(--vermelho_escuro);
+        font-size: 3rem;
+        padding: 1rem;
+    }
+
+    input {
+        border: transparent;
+        text-align: center;
+        font-size: 2rem;
+        width: 6vh;
+        height: 4VH;
+        display: block;
+        outline: none;
+    }
+}
+
+.addcarrinho_informacoes {
+    height: 5vh;
+    width: 20vh;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    color: var(--branco);
+    font-size: 1.5rem;
+    font-family: var(--montserrat_fonte);
+    background-color: var(--vermelho_escuro);
+    border: transparent;
+    outline: none;
+    border-radius: 0.4rem;
+
+    span {
+        margin-left: 10px;
+    }
+}
+
+.titulointeresses_informacoes {
+    font-family: var(--cinzel_fonte);
+    color: var(--branco);
+    font-weight: 600;
+    margin-top: 15vh;
+    margin-bottom: 8vh;
+    margin-left: 9vh;
+}
+
+/*--------------------------------------------------------------------------- Chatbot -------------------------------------------------------------------------------------- */
+#chatbot {
+    background-image: url(../img/cardapio/bgdesktopcardapio.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.welcome-message {
+    font-family: var(--montserrat_fonte);
+    color: var(--branco);
+    font-weight: 600;
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.5rem;
+    padding-top: 50vh;
+}
+
+#footer_chatbot {
+    background-color: var(--vermelho_escuro);
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.chat-form {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--cinza_claro);
+}
+
+textarea {
+    border: none;
+    background-color: transparent;
+    width: 60%;
+    outline: none;
+    resize: none;
+    overflow-y: auto;
+    font-family: var(--montserrat_fonte);
+    color: var(--branco);
+}
+
+textarea::placeholder{
+    color: var(--cinza_claro);
+}
+
+.input-field {
+    flex: 1;
+    padding: 0.8rem;
+    border: 1px solid var(--branco);
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: var(--montserrat_fonte);
+    color: var(--cinza_claro)
+}
+
+.send-button {
+    padding: 0.8rem 1.2rem;
+    background-color: var(--branco);
+    color: var(--vermelho_escuro);
+    font-family: var(--montserrat_fonte);
+    font-weight: 700;
+    border: transparent;
+    height: 5vh;
+    border-radius: 1.5rem;
+    font-size: 1.3rem; 
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.send-button:hover {
+    background-color: var(--cinza_clarinho);
+    color: var(--branco);
+
+}
+
+.chat-box {
+    display: flex;
+    flex-direction: column;
+    padding: 13vh 3vh 0 3vh;
+    gap: 1rem;
+    overflow-y: auto;
+    color: var(--branco)
+}
+
+.message {
+    display: flex;
+    align-items: flex-end;
+    max-width: 60%;
+    padding: 0.8rem 1rem;
+    border-radius: 12px;
+    font-family: var(--montserrat_fonte);
+    font-size: 1rem;
+}
+
+.bot-message {
+    align-self: flex-start;
+    background-color: var(--cinza_claro);
+    color: var(--preto);
+    border-top-left-radius: 0;
+    font-family: var(--montserrat_fonte);
+}
+
+.user-message {
+    align-self: flex-end;
+    background-color: var(--branco);
+    color: var(--preto);
+    border-top-right-radius: 0;
+    font-family: var(--montserrat_fonte);
+}
+
+.message img.icon {
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+}
+
+.bot-message {
+    flex-direction: row;
+}
+
+.user-message {
+    flex-direction: row-reverse;
+}
+
+.message span {
+    max-width: 100%;
+    word-wrap: break-word;
+}
+
+/*---------------------------------------------------------------------------Footer-------------------------------------------------------------------------------------- */
+footer {
+    margin-top: 20vh;
+
+    p {
+        color: var(--branco);
+        font-family: var(--montserrat_fonte);
+        font-weight: 600;
+    }
+
+    li {
+        color: var(--branco);
+        font-family: var(--montserrat_fonte);
+        font-weight: 600;
+    }
+
+    a {
+        text-decoration: none;
+    }
+}
+
+.nav-link {
+    color: var(--branco);
+}
+
+.footer_fundo {
+    width: 100%;
+    background-color: var(--vermelho_escuro);
+}
+
+.socialmedia {
+    display: flex;
+
+    gap: 10px;
+
+    i {
+        color: var(--branco);
+        font-size: 1.5rem;
+    }
+}
+
+.socialmedia2 {
+    margin-top: 35%;
+    margin-left: 7rem;
+    width: 30vh;
+}
+
+footer.col-6.col-md-2.mb-3 {
+    width: 35vh;
+}
+
+.principal_footer {
+    text-align: center;
+    width: 30vh;
+}
+
+.redirecionamento_footer {
+    margin-left: 8.2rem;
+    width: 30vh;
+    margin-top: 15%;
+}
+
+.cadastro_lancamentos {
+    margin-top: 6%;
+
+    input {
+        background-color: transparent;
+        border: 2px solid var(--branco);
+        border-radius: 20px;
+        padding-left: 10px;
+        width: 35vh;
+    }
+
+    input::placeholder {
+        font-family: var(--montserrat_fonte);
+        color: var(--branco);
+        font-size: 1rem;
+    }
+
+    button {
+        background-color: var(--branco);
+        border: transparent;
+        border-radius: 20px;
+        width: 15vh;
+        font-family: var(--montserrat_fonte);
+        color: var(--vermelho_escuro);
+        font-weight: 600;
+
+    }
+}
+
+/*---------------------------------------------------------------------------TELA PHONES-------------------------------------------------------------------------------------- */
+
+@media only screen and (max-width: 600px) {
+
+    /*---------------------------------------------------------------------- Home - Phone ------------------------------------------------------------------------------- */
+    html,
+    body {
+        max-width: 100vw !important;
+        overflow-x: hidden !important;
+    }
+
+    header {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    .inicio {
+        height: 70vh;
+        background-image: url(../img/home/bghome.svg);
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        overflow-x: hidden;
+    }
+
+    .navbar-toggler {
+        border: none !important;
+    }
+
+    a.nav-link {
+        font-size: 1.5vh;
+    }
+
+    .logohome {
+        width: 50%;
+        margin-left: 1.5rem;
+    }
+
+    .navbar-toggler-icon {
+        background-image: url(../img/icons/menu.svg) !important;
+        margin-top: 0.65rem;
+        outline: none;
+    }
+
+    .icones {
+        position: absolute;
+        top: 2.4vh;
+        right: 6vh;
+
+        .material-symbols-outlined.bagshop {
+            padding-right: 1vh;
+        }
+    }
+
+    .frase-inicial {
+        position: relative;
+        top: 13vh;
+        margin: 0 auto;
+        left: 50%;
+        transform: translateX(-21%);
+
+    }
+
+    button.navbar-toggler {
+        border-radius: 1rem;
+        width: 60px;
+        height: 60px;
+        z-index: 1000;
+    }
+
+    .slogan1,
+    .slogan2 {
+        width: 45vh;
+        font-size: 4.8rem;
+    }
+
+    .slogan1 {
+        text-align: center;
+        position: relative;
+        top: 5vh;
+        word-spacing: 0.1rem;
+
+    }
+
+    .slogan2 {
+        text-align: center;
+        margin-top: 2px;
+    }
+
+    /*---------------------------------- Personalize - Phone------------------------ */
+    .personalize {
+        height: 70vh;
+    }
+
+    .back-video-container {
+        max-width: 600px;
+        overflow-x: hidden;
+    }
+
+    .personalizetitle {
+        font-family: var(--cinzel_fonte);
+        color: var(--branco);
+        font-size: 4vh;
+        text-align: center;
+        padding-bottom: 5vh;
+        padding-top: 5vh;
+    }
+
+    .textpersonalize {
+        color: var(--branco);
+        width: 80%;
+        font-size: 2vh;
+        text-align: center;
+        margin: auto;
+    }
+
+    video {
+        transform: translateX(-90vh);
+    }
+
+    /*-------------------------------------- Carrossel - Phone ------------------------- */
+    #carousel {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        height: 110vh;
+    }
+
+    .telacarrossel {
+        width: 90%;
+
+        img {
+            width: 60%;
+        }
+    }
+
+    .carousel-inner {
+        position: relative;
+        width: 80%;
+        overflow: hidden;
+        left: 10%;
+    }
+
+    /*--------------------------------------------- Feito com Amor - Phone---------------------------------*/
+    #feitocomamor {
+        position: relative;
+        top: 20vh;
+        height: 150vh;
+        min-height: auto;
+    }
+
+    .feitocom,
+    .enviadocom {
+        font-size: 7vh;
+    }
+
+    .feitocom {
+        color: var(--vermelho_vivido);
+        padding: 0;
+    }
+
+    .feitotext {
+        word-break: normal;
+        max-width: 300px;
+        margin: auto;
+        margin-top: 25vh;
+    }
+
+    .enviadocom {
+        color: var(--verde_vivido);
+        position: relative;
+        bottom: 5.5vh;
+        padding-top: 2.5vh;
+        padding-left: 0;
+    }
+
+    .lateral {
+        display: flex;
+        margin-right: 0vh;
+        flex-direction: column-reverse;
+        align-items: flex-end;
+        padding-right: 4vh;
+    }
+
+    .redsquare {
+        background-color: #891515;
+        height: 30vh;
+        width: 30vh;
+    }
+
+    .forno {
+        position: relative;
+        left: 0;
+        top: -25vh;
+        width: 30vh;
+        margin: auto;
+    }
+
+    /* -----------------------------------------------Carrinho - Phone-------------------------------------- */
+    .cont-carrinho {
+        margin: 0;
+        padding: 0;
+        top: 10vh;
+
+        h2 {
+            text-align: center;
+            padding: 0.5rem;
+        }
+
+        .voltarcarrinho {
+            margin-left: 2rem;
+        }
+    }
+
+    .contcompras {
+        display: flex;
+        flex-direction: column;
+        padding-top: 0;
+    }
+
+    .produtos {
+        width: 50vh;
+        height: 8vh;
+        gap: 1.2vh;
+
+        h6 {
+            margin-left: 0;
+            width: 13vh;
+        }
+    }
+
+    .imgproduto {
+        margin-left: 0;
+        padding-left: 0;
+        width: 10vh;
+        height: 7vh;
+    }
+
+    .resumo {
+        border: none;
+    }
+
+    .detalhes {
+        font-size: 0.5rem;
+        padding-bottom: 0.5rem;
+        padding-top: 1rem;
+    }
+
+    .divlineproduto {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        padding-left: 0;
+        margin: 0;
+    }
+
+    .lineproduto {
+        display: none;
+    }
+
+    .qtdprodutos {
+        gap: 2vh;
+    }
+
+    .valorproduto {
+        margin-left: 0.5rem;
+    }
+
+    .separacao {
+        display: none;
+    }
+
+    .prelineresumo {
+        display: flex;
+    }
+
+    .resumo {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .cont-resumo {
+        h4 {
+            font-family: var(--montserrat_fonte);
+        }
+    }
+
+    .continuar {
+        margin: 3rem;
+        width: 15vh;
+        height: 5.5vh;
+    }
+
+    .nomeprod {
+        padding-bottom: 0;
+    }
+
+
+
+    /* --------------------------------------------------Endereço - Phone --------------------------------------- */
+    .cont-endereco {
+        top: 0;
+        margin: 0;
+        padding: 0;
+        top: 10vh;
+
+        h2 {
+            text-align: center;
+            padding: 0.5rem;
+        }
+
+        .voltarendereco {
+            margin-left: 2rem;
+        }
+    }
+
+    #endereco {
+        .resumo {
+            width: 120%;
+        }
+    }
+
+    .jgh {
+        gap: 1rem;
+    }
+
+    .container-fluid.endereco {
+        padding-top: 2vh;
+        input{
+            font-size: 1.5vh;
+        }
+        label {
+            font-size: 1rem;
+        }
+
+        .jgh input {
+            width: 20vh;
+        }
+
+        .jlt input {
+            width: 25vh;
+        }
+
+        .jlts input {
+            width: 14vh;
+        }
+
+        .salvar-endereco {
+            width: 30%;
+            border-radius: 0.4rem;
+            font-family: var(--montserrat_fonte);
+            border: none;
+            margin: 1rem;
+            font-size: 2.3vh;
+            color: #716f6f;
+
+            button {
+                height: 4vh;
+            }
+        }
+
+    }
+
+    .jtltt input::placeholder {
+        font-size: 0.5rem;
+    }
+
+    .jlt {
+        gap: 0.5rem;
+    }
+
+    .input-cep {
+        width: 25vh!important;
+    }
+
+    /* -------------------------------------------------Pagamento - Phone -------------------------------------- */
+    .cont-pagamento {
+        top: 0;
+        padding-left: 0;
+        padding-right: 0;
+        width: 100%;
+        top: 10vh;
+
+        h2 {
+            text-align: center;
+        }
+    }
+
+    .voltarpagamento {
+        margin-left: 2rem;
+    }
+
+    .container-fluid.pagamento {
+        padding-top: 2vh;
+
+        input {
+            width: 25vh;
+        }
+
+        .kkl {
+            margin: 0;
+            padding: 1.5vh;
+
+            input {
+                width: 20vh;
+            }
+        }
+
+        .alignsalvar {
+            display: flex;
+            justify-content: center;
+            height: 14vh;
+        }
+    }
+
+    .salvar-pagamento {
+        width: 30%;
+        border-radius: 0.4rem;
+        font-family: var(--montserrat_fonte);
+        border: none;
+        padding: 0;
+        margin: 0.5rem;
+        font-size: 2.3vh;
+        color: #716f6f;
+
+        button {
+            height: 4vh;
+        }
+    }
+
+    #pagamento {
+        .resumo {
+            width: 120%;
+        }
+    }
+
+    /* -------------------------------------------- Avaliações - Phone-------------------------------------------- */
+    .allavaliacoes {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+    }
+
+    #avaliacoes {
+        height: 270vh;
+        margin-top: 30vh;
+        overflow-y: hidden;
+        overflow-x: hidden;
+    }
+
+    .avaliacoes {
+        display: flex;
+        justify-content: center;
+        width: 35vh;
+    }
+
+    /*--------------------------------------------- Cardápio - Home ------------------------------------ */
+    .cardapio_banner {
+        background-position: left;
+        text-align: center;
+        margin-top: 6vh;
+    }
+
+    #cardapio_home {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nossossabores {
+        position: relative;
+        top: 50%;
+        left: 40%;
+        transform: translate(-50%, -50%);
+        margin: 0 auto;
+        width: 90%;
+        padding: 1rem;
+        margin-right: 0;
+
+        h1 {
+            font-family: var(--cinzel_fonte);
+            color: var(--branco);
+            font-weight: 650;
+            width: 60vh;
+            text-align: center;
+        }
+
+        p {
+            font-family: var(--montserrat_fonte);
+            color: var(--branco);
+            text-align: center;
+            width: 70vh;
+        }
+
+        button {
+            font-family: var(--montserrat_fonte);
+            font-weight: 700;
+            color: var(--marrom);
+            border: transparent;
+            background-color: var(--amarelo_apagado);
+            width: 23vh;
+            height: 6vh;
+            border-radius: 0.4rem;
+        }
+    }
+
+    /* -------------------------------------------- Contato - Phone -------------------------------------------- */
+    #contato {
+        overflow-x: hidden;
+        overflow-y: hidden;
+
+        p {
+            margin-top: 3vh;
+        }
+
+    }
+
+    .container_form {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        padding: 1.5rem;
+        margin: 0 1rem;
+        margin-top: 1vh;
+        box-sizing: border-box;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+
+    /*--------------------------------------------- Cardápio - Tela ---------------------------------------*/
+    #body_cardapio {
+        background: linear-gradient(90deg, var(--preto_acizentado), var(--preto));
+        background-repeat: no-repeat;
+        background-size: cover;
+        overflow-x: hidden;
+    }
+
+    .search_container {
+        width: 38vh;
+
+        button {
+            padding-right: 15px;
+        }
+    }
+
+    /*--------------------------------------------- Login - Phone ---------------------------------------*/
+    #body_login {
+        background-image: url(../img/login/bgmobilelogin.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    .titulologin {
+        text-align: center;
+        color: var(--verde_vivido);
+        margin-top: 5vh;
+        font-size: 6rem;
+    }
+
+    .containerLogin {
+        position: static;
+        margin: 0 auto;
+        top: auto;
+        transform: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .input_login {
+        display: flex;
+        flex-direction: column;
+
+        input {
+            background-color: transparent;
+            border: 1px solid var(--branco);
+            border-radius: 0.4rem;
+            height: 6vh;
+            width: 30vh;
+            margin-bottom: 1rem;
+            padding-left: 10px;
+            outline: none;
+        }
+
+        input::placeholder {
+            font-family: var(--montserrat_fonte);
+            color: var(--branco);
+        }
+    }
+
+    .entrar_login {
+        background-color: var(--vermelho_escuro);
+        width: 13vh;
+        height: 5vh;
+        color: var(--branco);
+        border: transparent;
+        border-radius: 0.4rem;
+        font-family: var(--montserrat_fonte);
+        font-weight: 650;
+        font-size: 1.2rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .continuecom {
+        color: var(--branco);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        hr {
+            width: 6vh;
+        }
+
+        p {
+            font-family: var(--montserrat_fonte);
+            margin-top: 10px;
+            margin-left: 8px;
+            margin-right: 8px;
+        }
+    }
+
+    .esqueceusenha {
+        text-align: center !important;
+        margin-left: 0;
+        width: 100%;
+
+        p {
+            font-family: var(--montserrat_fonte);
+            color: var(--branco);
+            text-align: center !important;
+            margin-left: 0;
+        }
+
+        a {
+            text-decoration: none;
+            margin-left: 4px;
+            font-weight: 600;
+        }
+    }
+
+    .esqueceusenha#naotemconta {
+        text-align: center !important;
+        margin-left: 0;
+        width: 88%;
+
+        p {
+            font-family: var(--montserrat_fonte);
+            color: var(--branco);
+            text-align: center !important;
+            margin-left: 0;
+        }
+
+        a {
+            text-decoration: none;
+            margin-left: 4px;
+            font-weight: 600;
+        }
+    }
+
+    /*--------------------------------------------- Cadastro ---------------------------------------*/
+    #body_cadastro {
+        background-image: url(../img/cadastro/bgmobilecadastro.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .containerCadastro {
+        position: static;
+        margin: 0 auto;
+        top: auto;
+        transform: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .form_cadastro {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .boxInputeIcon {
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+        border: 1px solid var(--branco);
+        margin: 1.6rem;
+        height: 6vh;
+        width: 40vh;
+        border-radius: 0.6rem;
+
+        i {
+            color: var(--branco);
+            padding-left: 10px;
+        }
+
+        input {
+            border: transparent;
+            background-color: transparent;
+            margin-left: 20px;
+            outline: none;
+            font-family: var(--montserrat_fonte);
+            color: var(--branco);
+        }
+
+        input::placeholder {
+            font-family: var(--montserrat_fonte);
+            color: white;
+        }
+    }
+
+    /*---------------------------------- Informações ------------------------ */
+    #body_informacoes {
+        background: linear-gradient(90deg, var(--preto_acizentado), var(--preto));
+    }
+
+    .img_informacoes {
+        height: 5vh;
+        margin: 15vh 0 0 1rem;
+
+        img {
+            width: 80%;
+        }
+    }
+
+    .titulointeresses_informacoes {
+        text-align: center;
+        margin: 0;
+        padding: 1rem;
+    }
+
+    /*---------------------------------- Footer ------------------------ */
+    .socialmedia2 {
+        margin-left: 2rem;
+    }
+
+    .principal_footer {
+        width: 20vh;
+        margin-top: 2vh;
+    }
+
+    .tlls {
+        text-align: center;
+    }
+
+    .redirecionamento_footer {
+        width: 15vh;
+        text-align: center;
+        margin-top: 15%;
+    }
+
+    .cadastro_lancamentos {
+        padding: 0.5rem 1.5rem 0.4rem 1.5rem;
+        text-align: center;
+
+        input {
+            height: 4vh;
+        }
+
+        input::placeholder {
+            font-family: var(--montserrat_fonte);
+            color: var(--branco);
+            font-size: 1rem;
+        }
+
+        button {
+            height: 4vh;
+            margin-top: 1rem;
+        }
+    }
+
+    .tllj {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+}

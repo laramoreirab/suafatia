@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Endereço</title>
+    <link rel="icon" href="assets/img/logo_invert.svg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@200" />
+    <script src="https://kit.fontawesome.com/167f6b34b8.js" crossorigin="anonymous"></script>
+</head>
+
+<body id="endereco">
+    <header class="header">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html"><img src="assets/img/logo.png" alt="Logo"
+                        class="logohome headerlink"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link headerlink" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link headerlink" href="cardapio.html">Cardápio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link headerlink" href="personalizacao.html">Personalize</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="icones">
+                    <span class="material-symbols-outlined bagshop headerlink"><a href="carrinho.html"
+                            style="color: white; text-decoration: none;">local_mall</a></span>
+                    <span class="material-symbols-outlined headerlink"><a href="login.html"
+                            style="color: white; text-decoration: none;">account_circle</a></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="cont-endereco">
+        <a href="carrinho.html" class="voltarendereco">
+            < Voltar</a>
+                <h2>Endereço</h2>
+                <div class="container-fluid endereco">
+                    <div class="row">
+                        <div class="col-12 col-md-6">
+                            <div class="container-fluid superior">
+                                <div class="row">
+                                    <div class="col-6 jgh">
+                                        <label for="nome">Nome completo</label><br>
+                                        <input type="text"><br><br>
+                                        <label for="cpf">CPF</label><br>
+                                        <input type="number">
+                                    </div>
+                                    <div class="col-6 jgh">
+                                        <label for="celular">Celular</label><br>
+                                        <input type="number"><br><br>
+                                        <label for="email">Email</label><br>
+                                        <input type="email"><br><br>
+                                    </div>
+                                    <h6>Endereço padrão</h6><br><br>
+                                    <div class="row">
+                                        <div class="col-8 jlt">
+                                            <input type="text" placeholder="Rua ou logradouro"><br><br>
+                                        </div>
+                                    </div>
+                                    <div class="row jltt">
+                                        <div class="col-8 jlt">
+                                            <input type="text" placeholder="Bairro"><br><br>
+                                            <input type="text" placeholder="Cidade"><br><br>
+                                            <input type="number" placeholder="CEP" class="input-cep"><br><br>
+                                        </div>
+                                        <div class="col-4 jlts">
+                                            <input type="number" placeholder="n° da casa"><br><br>
+                                            <input type="text" placeholder="Estado">
+                                        </div>
+                                    </div>
+                                    <div class="alignbtt">
+                                        <button type="submit" class="salvar-endereco">Salvar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="resumo">
+                                <div class="separacao"></div>
+                                <div class="cont-resumo">
+                                    <hr class="prelineresumo">
+                                    <h4><b>Resumo</b></h4>
+                                    <hr class="line1resumo">
+                                    <div class="context-resumo">
+                                        <p class="nomeprod">Nome produto</p>
+                                        <p class="precoprodresumo">R$ 00,00</p>
+                                    </div>
+                                    <div class="context-resumo">
+                                        <p class="textfrete">Frete de entrega</p>
+                                        <p class="precofrete">R$ 07,00</p>
+                                    </div>
+                                    <div class="context-resumo">
+                                        <p class="subtotal">Subtotal</p>
+                                        <p class="precosubtotal">R$ 30,00</p>
+                                    </div>
+                                    <hr class="line2resumo">
+                                    <div class="context-resumo">
+                                        <p class="total">Total</p>
+                                        <p class="precototal"><b>R$ 37,00</b></p>
+                                    </div>
+                                    <a href="pagamento.html" class="continuarcompra"><button
+                                            class="continuar">Continuar</button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    </div>
+</body>
+
+</html>
