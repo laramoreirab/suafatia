@@ -236,10 +236,18 @@ nav {
 
 .carousel-control-prev-icon {
     background-image: url(../img/icons/anterior_carrossel.png) !important;
+    margin-right: 15vh;
 }
 
 .carousel-control-next-icon {
     background-image: url(../img/icons/proximo_carrossel.png) !important;
+    margin-left: 15vh;
+}
+
+.carousel-item.active {
+    display: flex;
+    align-content: center;
+    justify-content: center;
 }
 
 .titulocursivo {
@@ -255,13 +263,14 @@ nav {
 
 .carousel-item {
     img {
-        width: 5%;
+        width: 1%;
     }
 }
 
 .titulocard {
     font-family: var(--cinzel_fonte);
     font-weight: 700;
+    width: 30vh;
     text-align: center;
 }
 
@@ -269,17 +278,28 @@ nav {
     font-family: var(--montserrat_fonte);
     text-align: center;
 }
+
 .linecarrossel {
-  width: 100px; /* comprimento da linha */
-  height: 2px;  /* espessura da linha */
-  background-color: #ccc;
-  transform: rotate(90deg);
-  margin: auto 5px;
-} 
-.gg{
-    width: 30vh;
+    width: 160px;
+    /* comprimento da linha */
+    height: 2px;
+    /* espessura da linha */
+    transform: rotate(90deg);
+    margin-top: 200px;
 }
-.botaocard { 
+
+.gg {
+    width: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    gap: 0;
+    margin: 0;
+}
+
+.botaocard {
     display: flex;
     justify-content: center;
     align-content: center;
@@ -305,6 +325,23 @@ nav {
 
 }
 
+.redirecionamentochatbot {
+  position: fixed;
+  bottom: 20px;     /* distância do fundo da tela */
+  right: 20px;       /* distância da borda esquerda */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem;
+  z-index: 9999;    /* garante que fique acima de outros elementos */
+  img{
+    width: 150%;   
+  }
+}
+.redirecionamentochatbot:hover{
+    transform: scale(1.1);
+    transition: 1s ease;
+}
 /*----------------------------------------------------------------- Feito com Amor ---------------------------------------------------------------------*/
 #feitocomamor {
     margin-top: 16vh;
@@ -398,6 +435,11 @@ nav {
         font-weight: 600;
         font-size: 1.5rem;
     }
+}
+
+.avaliacoes:hover {
+    transform: scale(1.05);
+    transition: 0.6s ease;
 }
 
 .jsss {
@@ -687,11 +729,13 @@ nav {
         margin-bottom: 0 !important;
     }
 }
-.voltarcarrinho{
+
+.voltarcarrinho {
     text-decoration: none;
     font-family: var(--montserrat_fonte);
     color: var(--preto);
 }
+
 .contcompras {
     padding-top: 7vh;
     width: 160vh;
@@ -1604,7 +1648,7 @@ textarea {
     color: var(--branco);
 }
 
-textarea::placeholder{
+textarea::placeholder {
     color: var(--cinza_claro);
 }
 
@@ -1627,7 +1671,7 @@ textarea::placeholder{
     border: transparent;
     height: 5vh;
     border-radius: 1.5rem;
-    font-size: 1.3rem; 
+    font-size: 1.3rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
@@ -1927,6 +1971,18 @@ footer.col-6.col-md-2.mb-3 {
         left: 10%;
     }
 
+    .linecarrossel {
+        display: none;
+    }
+
+    .carousel-control-prev-icon {
+        margin-right: 0;
+    }
+
+    .carousel-control-next-icon {
+        margin-left: 0;
+    }
+
     /*--------------------------------------------- Feito com Amor - Phone---------------------------------*/
     #feitocomamor {
         position: relative;
@@ -2113,9 +2169,11 @@ footer.col-6.col-md-2.mb-3 {
 
     .container-fluid.endereco {
         padding-top: 2vh;
-        input{
+
+        input {
             font-size: 1.5vh;
         }
+
         label {
             font-size: 1rem;
         }
@@ -2157,7 +2215,7 @@ footer.col-6.col-md-2.mb-3 {
     }
 
     .input-cep {
-        width: 25vh!important;
+        width: 25vh !important;
     }
 
     /* -------------------------------------------------Pagamento - Phone -------------------------------------- */
@@ -2241,6 +2299,7 @@ footer.col-6.col-md-2.mb-3 {
         justify-content: center;
         width: 35vh;
     }
+
 
     /*--------------------------------------------- Cardápio - Home ------------------------------------ */
     .cardapio_banner {

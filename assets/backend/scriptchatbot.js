@@ -3,6 +3,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const input = document.getElementById("user-input");
     const chatBox = document.getElementById("chat-box");
     const welcomeMessage = document.getElementById("welcome-message");
+    const endpoint = "";
+    const apiKey = "";
+    const deployment = "";
+    const apiVersion = "";
 
     // Função para adicionar mensagens ao chat
     function addMessage(text, sender) {
@@ -14,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
         icon.alt = sender === "user" ? "Usuário" : "Bot";
 
         const textNode = document.createElement("span");
-        textNode.textContent = text;
+        textNode.innerHTML = marked.parse(text);
 
         message.appendChild(icon);
         message.appendChild(textNode);
@@ -54,7 +58,17 @@ document.addEventListener("DOMContentLoaded", () => {
                     - Dietas e restrições: filtre ingredientes conforme restrições como veganismo ou intolerância à lactose.
                     - Personalização: permita que o usuário escolha massa, molho, queijos, proteínas, vegetais e adicionais, criando uma pizza única.
                     - Pedido finalizado: quando o usuário solicitar o pedido, responda com "Pedido feito com sucesso. O tempo de espera é de 40min."
+
+                    Sabores disponíveis:
+                    - Carnes: Lombo, Toscana, Frango, Pepperoni, Carne Seca, Calabresa, Bacon, Picanha
+                    - Frutos do mar: Atum, Camarão
+                    - Queijos: 4 Queijos
+                    - Tradicionais: Napolitana, Portuguesa, Marguerita, Mexicana
+                    - Vegetais: Rúcula, Milho, Escarola, Palmito, Brócolis, Alcachofras, Shimeji
+                    - Especiais: Vegetariana, Bruschetta
+
                     Seja sempre prestativo e torne a experiência divertida e saborosa!`
+
 
                 },
                 {

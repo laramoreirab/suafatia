@@ -23,7 +23,7 @@ router.post('/', async (req,res)=>{
 
         try {
         const dataJson = JSON.parse(data)
-        const usuario = dataJson.find(user => user.email === email)
+        const usuario = dataJson.find(user => user.email == email)
 
         if (!usuario) {
             return res.status(400).json({ erro: 'Email ou senha inválidos!' })
