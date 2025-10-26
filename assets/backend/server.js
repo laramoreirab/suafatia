@@ -6,6 +6,7 @@ const port = 3000
 const rotaCadastro = require('./rotas/rotaCadastro')
 const rotaLogin = require('./rotas/rotaLogin')
 const rotaCarrinho = require('./rotas/rotaCarrinho')
+const rotaPersonalize = require('./rotas/rotaPersonalize')
 const logger = require('./middlewares/logger')
 
 app.use(cors({
@@ -21,6 +22,8 @@ app.use('/cadastro', rotaCadastro)
 app.use('/login', rotaLogin)
 
 app.use('/carrinho', rotaCarrinho)
+
+app.use('./personalize', rotaPersonalize)
 
 app.get('/', (req, res) => {
     res.status(200).send('Página Inicial')
