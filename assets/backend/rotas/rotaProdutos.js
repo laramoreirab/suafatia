@@ -34,6 +34,66 @@ router.get('/:id', async (req, res) => {
           document.querySelector('.img_informacoes img').src = "${produto.imagem}";
           ${produto.preco ? `document.querySelector('.preco_informacoes').textContent = "R$ ${produto.preco}";` : ''}
         });
+
+        // === ADICIONAR AO CARRINHO COM AUTENTICAÇÃO ===
+          const btnAdicionar = document.querySelector('.addcarrinho_informacoes');
+          const inputQuantidade = document.getElementById('quantidade-input');
+
+          btnAdicionar.addEventListener('click', async () => {
+            // Verifica se está logado
+            const token = localStorage.getItem('token');
+            if (!token) {
+              alert('Você precisa fazer login para adicionar ao carrinho!');
+              window.location.href = 'http://localhost:5500/login.html';
+              return;
+            }
+
+            // Pega a quantidade
+            const quantidade = parseInt(inputQuantidade.value) || 1;
+
+            // Monta o objeto do produto
+            const itemCarrinho = {
+              id: 'prod_' + produtoAtual.id + '_' + Date.now(),
+              nome: produtoAtual.nome,
+              preco: produtoAtual.preco,
+              quantidade: quantidade,
+              imagem: produtoAtual.imagem,
+              tipo: 'pizza_pronta'
+            };
+
+            try {
+              const response = await fetch('http://localhost:3000/carrinho/adicionar', {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json',
+                  'Authorization': 'Bearer ' + token
+                },
+                body: JSON.stringify(itemCarrinho)
+              });
+
+              const resultado = await response.json();
+
+                if (response.ok) {
+                alert('✅ ' + resultado.message);
+                // Reseta quantidade
+                inputQuantidade.value = 1;
+              } else {
+                if (response.status === 401) {
+                  alert('Sessão expirada. Faça login novamente.');
+                  localStorage.removeItem('token');
+                  localStorage.removeItem('usuario');
+                  window.location.href = 'http://localhost:5500/login.html';
+                } else {
+                  alert('Erro: ' + resultado.erro);
+                }
+              }
+            } catch (erro) {
+              console.error('Erro:', erro);
+              alert('Erro ao adicionar ao carrinho');
+            }
+          });
+        });
+
       </script>
     </head>`);
 

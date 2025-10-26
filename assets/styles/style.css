@@ -2727,7 +2727,8 @@ footer.col-6.col-md-2.mb-3 {
         font-size: 3rem;
         position: relative;
         z-index: 10;
-        margin-top: 8vh;
+        top: 10vh;
+        color: #891515;
     }
     .borda-superior{
         margin: -10vh;
