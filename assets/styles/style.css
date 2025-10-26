@@ -534,15 +534,15 @@ nav {
 }
 
 /* ------------------------------------------------------------ Personalização ------------------------------------------------------*/
+body.persona{
+    overflow-x: hidden;
+}
+.container-fluid.persona{
+    padding: 0;
+}
 .imgbackpersonal {
     width: 100%;
 }
-
-.backpersonal {
-    height: auto;
-    overflow-x: hidden;
-}
-
 .criesuaobra {
     font-family: var(--adventure_fonte);
     font-size: 25vh;
@@ -556,7 +556,7 @@ nav {
 .borda-superior {
     position: relative;
     width: 95%;
-    min-height: 30vh;
+    min-height: 35vh;
     background-color: var(--branco);
     z-index: 2;
     border-radius: 20px 20px 0 0;
@@ -571,9 +571,10 @@ nav {
     z-index: 2;
 }
 
+
 .contpizza {
     position: relative;
-    bottom: 80vh;
+    bottom: 77vh;
     z-index: 3;
     display: flex;
     justify-content: center;
@@ -609,12 +610,20 @@ nav {
         list-style-type: none;
     }
 
-    .alignbtt {
-        padding-top: 5vh;
+    .alignbtts{
+        padding-top: 4.5vh;
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
     }
-
-    .btt-style {
+    .btt-style{
+        position: relative;
+        margin-right: 3vh;
+        margin-bottom: 3vh;
+    }
+    .btt-style label{
         font-family: var(--montserrat_fonte);
+        display: block;
         width: 27vh;
         height: 9vh;
         border-radius: 0.5rem;
@@ -622,17 +631,44 @@ nav {
         box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.212);
         background-color: #fcfcfc;
         font-size: 2.3vh;
-        margin-right: 6vh;
         transition: .3s;
-        margin-bottom: 6vh;
+        text-align: center;
+        padding-top: 2.5vh;
     }
 
-    .btt-style:hover {
+        .btt-style input[type="radio"],
+        .btt-style-cancel input[type="radio"],
+        .btt-style-cancel input[type="checkbox"],
+        .btt-style input[type="checkbox"] {
+            position: absolute;
+            left: 3vh;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+    .btt-style input:checked + label{
         transform: scale(1.05);
         background-color: #ffde59ce;
     }
 
-    .btt-style-cancel {
+    .btt-style input:disabled + label{
+          opacity: 0.5;
+            cursor: not-allowed;
+            background: #e9ecef;
+
+    }
+    .btt-style label:hover:not(.disable){
+            background-color: #ffde59ce;
+    }
+
+    .btt-style:hover {
+        transform: scale(1.05);
+        border-radius: 0.5rem;
+        background-color: #ffde59ce;
+    }
+
+
+    .btt-style-cancel label {
         font-family: var(--montserrat_fonte);
         color: #878787;
         width: 27vh;
@@ -642,16 +678,29 @@ nav {
         box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.212);
         background-color: #e6e6e6;
         font-size: 2.3vh;
-        margin-right: 6vh;
         transition: .3s;
-        margin-bottom: 6vh;
+         text-align: center;
+        padding-top: 2.5vh;
     }
 
-    .btt-style-cancel:hover {
-        background-color: #d1d1d1;
+    .btt-style-cancel label:hover{
+        background-color: #bebebe;
         transform: scale(1.05);
+        border-radius: 0.5rem;
     }
+    .btt-style-cancel input:checked + label{
+        transform: scale(1.05);
+        background-color: #bebebe;
+    }
+    .btt-style-cancel input:disabled + label{
+          opacity: 0.5;
+            cursor: not-allowed;
+            background: #e9ecef;
 
+    }
+    .btt-style-cancel label:hover:not(.disable){
+            background-color: #bebebe;
+    }
     p {
         font-family: var(--montserrat_fonte);
     }
@@ -662,8 +711,8 @@ nav {
 
     .infosfinais {
         padding-top: 7vh;
-
-        textarea {
+    }
+     textarea#obspersonalizacao{
             padding-left: 10px;
             padding-top: 10px;
             width: 65vh;
@@ -672,14 +721,11 @@ nav {
             resize: none;
             outline: none;
         }
-    }
-
     .observacoes {
         resize: none;
         width: 50vh;
         height: 50vh;
     }
-
     .addcarrinho {
         font-family: var(--montserrat_fonte);
         width: 40vh;
@@ -1653,7 +1699,7 @@ nav {
     color: var(--cinza_claro);
 }
 
-textarea {
+textarea.input-field {
     border: none;
     background-color: transparent;
     width: 60%;

@@ -31,5 +31,6 @@ form.addEventListener('submit', async(b)=>{
     localStorage.setItem('usuario', JSON.stringify(usuario))
 
     alert('Login realizado com sucesso!')
-
+   
+    window.location.href = 'index.html'
 })

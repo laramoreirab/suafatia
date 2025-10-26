@@ -21,7 +21,7 @@
     <script src="https://kit.fontawesome.com/167f6b34b8.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body class="persona">
     <header class="header">
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
@@ -55,115 +55,251 @@
         </nav>
 
     </header>
-    <div class="container-fluid">
-        <img src="assets/img/personalizacao/backpersonaliza.jpg" alt="" class="imgbackpersonal">
-    </div>
-    </div>
+    <div class="container-fluid persona">
+    <img src="assets/img/personalizacao/backpersona.svg" alt="" class="imgbackpersonal">
     <h1 class="criesuaobra">Crie sua obra-prima</h1>
-    <div class="borda-superior">
     </div>
+    <div class="borda-superior"></div>
     <div class="container-personalizacao">
         <div class="borda-superior"></div>
     </div>
     <div class="contpizza">
-        <img src="assets/img/personalizacao/pizzapersona.png" alt="" class="pizzapersonalizada">
+    <img src="assets/img/personalizacao/pizzapersona.png" alt="" class="pizzapersonalizada">
     </div>
     <div class="container-fluid cont-passospersona">
+         <form id="pizzaForm">
         <div class="passo">
             <h5>1° Passo</h5>
             <h3>Escolha o tamanho</h3>
-            <div class="alignbtt">
-                <button class="btt-style">Grande</button>
-                <button class="btt-style">Média</button>
-                <button class="btt-style">Pequena</button>
+            <div class="alignbtts">
+                 <div class="btt-style">
+                        <input type="radio" name="tamanho" id="grande" value="Pequena" value="Grande" required>
+                        <label for="grande">Grande</label>
+                    </div>
+                <div class="btt-style">
+                    <input type="radio" name="tamanho" id="media" value="Média" required>
+                    <label for="media">Média</label>
+                </div>
+                <div class="btt-style">
+                <input type="radio" name="tamanho" id="pequeno" value="Pequeno" required>
+                <label for="pequeno">Pequeno</label>
+                </div>
             </div>
         </div>
         <div class="passo">
             <h5>2° Passo</h5>
             <h3>Tipo de massa</h3>
-            <div class="alignbtt">
-                <button class="btt-style">Napolitana</button>
-                <button class="btt-style">Pan</button>
-                <button class="btt-style">Chicagoana</button>
-                <button class="btt-style">Siciliana</button>
-                <button class="btt-style">Nova-Iorquina</button>
+            <div class="alignbtts">
+                <div class="btt-style">
+                <input type="radio" name="massa" id="napolitana" value="Napolitana" required>
+                <label for="napolitana">Napolitana</label>
+                </div>
+                <div class="btt-style">
+                <input type="radio" name="massa" id="pan" value="Pan" required>
+                <label for="pan">Pan</label>
+                </div>
+                <div class="btt-style">
+                <input type="radio" name="massa" id="chicagoana" value="Chicagoana" required>
+                <label for="chicagoana">Chicagoana</label>
+                </div>
+                <div class="btt-style">
+                <input type="radio" name="massa" id="siciliana" value="Siciliana" required>
+                <label for="siciliana">Siciliana</label>
+                </div>
+                <div class="btt-style">
+                <input type="radio" name="massa" id="novaiorquina" value="Nova-Iorquina" required>
+                <label for="novaiorquina">Nova-Iorquina</label>
+                </div>
             </div>
         </div>
         <div class="passo">
             <h5>3° Passo</h5>
             <h3>Tipo de queijo</h3>
-            <div class="alignbtt">
-                <button class="btt-style">Mussarela</button>
-                <button class="btt-style">Mussarela vegana</button>
-                <button class="btt-style">Mussarela de búfala</button>
-                <button class="btt-style">Provolone</button>
-                <button class="btt-style">Parmesão</button>
-                <button class="btt-style-cancel">Sem queijo</button>
+            <div class="alignbtts">
+                <div class="btt-style">
+                <input type="radio" name="queijo" id="mussarela" value="Mussarela" required>
+                <label for="mussarela">Mussarela</label>
+                </div>
+                <div class="btt-style">
+                <input type="radio" name="queijo" id="mussarelaveg" value="Mussarela Vegana" required>
+                <label for="mussarelaveg">Mussarela Vegana</label>
+                </div>
+                <div class="btt-style">
+                <input type="radio" name="queijo" id="mussarelabuf" value="Mussarela de búfala" required>
+                <label for="mussarelabuf">Mussarela de búfala</label>
+                </div>
+                <div class="btt-style">
+                <input type="radio" name="queijo" id="provolone" value="Provolone" required>
+                <label for="provolone">Provolone</label>
+                </div>
+                <div class="btt-style">
+                <input type="radio" name="queijo" id="parmesao" value="Parmesão" required>
+                <label for="parmesao">Parmesão</label>
+                </div>
+                <div class="btt-style-cancel">
+                <input type="radio" name="queijo" id="semqueijo" value="Sem Queijo" required>
+                <label for="semqueijo">Sem queijo</label>
+                </div>
             </div>
         </div>
         <div class="passo">
             <h5>4° Passo</h5>
             <h3>Recheios</h3>
             <p>O que você gostaria que tivesse em maior quantidade na sua pizza?</p>
-            <div class="alignbtt">
-                <button class="btt-style">Frango</button>
-                <button class="btt-style">Frango & catupiry</button>
-                <button class="btt-style">Carne seca</button>
-                <button class="btt-style">Calabresa</button>
-                <button class="btt-style">Presunto</button>
-                <button class="btt-style">Camarão</button>
-                <button class="btt-style">Palmito</button>
-                <button class="btt-style">4 Queijos</button>
-                <button class="btt-style">Brócolis</button>
-                <button class="btt-style">Atum</button>
-                <button class="btt-style">Rúcula</button>
-                <button class="btt-style">Pepperoni</button>
-                <button class="btt-style">Mix de Vegetais</button>
-                <button class="btt-style-cancel">Apenas queijo</button>
+            <div class="alignbtts">
+                <div class="btt-style">
+                <input type="checkbox" name="recheio" id="frango" value="Frango" data-group="recheio">
+                <label for="frango">Frango</label>
+                </div>
+                <div class="btt-style">
+                <input type="checkbox" name="recheio" id="frangocatupiry" value="Frango & catupiry" data-group="recheio">
+                <label for="frangocatupiry">Frango & catupiry</label>
+                </div>
+                <div class="btt-style">
+                <input type="checkbox" name="recheio" id="carneseca" value="Carne Seca" data-group="recheio">
+                <label for="carneseca">Carne Seca</label>
+                </div>
+                <div class="btt-style">
+                <input type="checkbox" name="recheio" id="calabresa" value="Calabresa" data-group="recheio">
+                <label for="calabresa">Calabresa</label>
+                </div>
+                <div class="btt-style">
+                <input type="checkbox" name="recheio" id="presunto" value="Presunto" data-group="recheio">
+                <label for="presunto">Presunto</label>
+                </div>
+                <div class="btt-style">
+                <input type="checkbox" name="recheio" id="camarao" value="Camarão" data-group="recheio">
+                <label for="camarao">Camarão</label>
+                </div>
+                <div class="btt-style">
+                <input type="checkbox" name="recheio" id="palmito" value="Palmito" data-group="recheio">
+                <label for="palmito">Palmito</label>
+                </div>
+                <div class="btt-style">
+                <input type="checkbox" name="recheio" id="quatroqueijos" value="4 Queijos" data-group="recheio">
+                <label for="quatroqueijos">4 Queijos</label>
+                </div>
+                <div class="btt-style">
+                <input type="checkbox" name="recheio" id="brocolis" value="Brócolis" data-group="recheio">
+                <label for="brocolis">Brócolis</label>
+                </div>
+                <div class="btt-style">
+                <input type="checkbox" name="recheio" id="atum" value="Atum" data-group="recheio">
+                <label for="atum">Atum</label>
+                </div>
+                <div class="btt-style">
+                <input type="checkbox" name="recheio" id="rucula" value="Rúcula" data-group="recheio">
+                <label for="rucula">Rúcula</label>
+                </div>
+                <div class="btt-style">
+                <input type="checkbox" name="recheio" id="pepperoni" value="Pepperoni" data-group="recheio">
+                <label for="pepperoni">Pepperoni</label>
+                </div>
+                <div class="btt-style">
+                <input type="checkbox" name="recheio" id="mixvegetais" value="Mix de Vegetais" data-group="recheio">
+                <label for="mixvegetais">Mix de Vegetais</label>
+                </div>
+                <div class="btt-style-cancel">
+                <input type="checkbox" name="recheio" id="apenasqueijo" value="Apenas Queijo" data-group="recheio">
+                <label for="apenasqueijo">Apenas queijo</label>
+                </div>
             </div>
         </div>
         <div class="passo">
             <h5>5° Passo</h5>
-            <h3>Coberturaa</h3>
+            <h3>Cobertura</h3>
             <p>O que você gostaria que tivesse por cima do recheio da sua pizza?</p>
-            <div class="alignbtt">
-                <button class="btt-style">Bacon</button>
-                <button class="btt-style">Tomate</button>
-                <button class="btt-style">Azeitona</button>
-                <button class="btt-style">Cebola</button>
-                <button class="btt-style">Catupiry</button>
-                <button class="btt-style">Milho</button>
-                <button class="btt-style">Raspas de trufa</button>
-                <button class="btt-style">Manjericão</button>
-                <button class="btt-style">Parmesão</button>
-                <button class="btt-style">Shimeji</button>
-                <button class="btt-style">Pimentão</button>
-                <button class="btt-style">Berinjela</button>
-                <button class="btt-style">Abobrinha</button>
-                <button class="btt-style">Alcachofra</button>
-                <button class="btt-style">Figo</button>
-                <button class="btt-style">Abacaxi</button>
-                <button class="btt-style-cancel">Sem cobertura</button>
+            <div class="alignbtts">
+                <div class="btt-style">
+                <input type="checkbox" name="cobertura" id="bacon" value="Bacon" data-group="cobertura">
+                <label for="bacon">Bacon</label>
+                </div>
+                <div class="btt-style">
+                <input type="checkbox" name="cobertura" id="tomate" value="Tomate" data-group="cobertura">
+                <label for="tomate">Tomate</label>
+                </div>
+                <div class="btt-style">
+                <input type="checkbox" name="cobertura" id="azeitona" value="Azeitona" data-group="cobertura">
+                <label for="azeitona">Azeitona</label>
+                </div>
+                <div class="btt-style">
+                <input type="checkbox" name="cobertura" id="cebola" value="Cebola" data-group="cobertura">
+                <label for="cebola">Cebola</label>
+                </div>
+                <div class="btt-style">
+                <input type="checkbox" name="cobertura" id="catupiry" value="Catupiry" data-group="cobertura">
+                <label for="catupiry">Catupiry</label>
+                </div>
+                <div class="btt-style">
+                <input type="checkbox" name="cobertura" id="milho" value="Milho" data-group="cobertura">
+                <label for="milho">Milho</label>
+                </div>
+                <div class="btt-style">
+                <input type="checkbox" name="cobertura" id="raspastrufa" value="Raspas de trufa" data-group="cobertura">
+                <label for="raspastrufa">Raspas de trufa</label>
+                </div>
+                <div class="btt-style">
+                <input type="checkbox" name="cobertura" id="manjericao" value="Manjericão" data-group="cobertura">
+                <label for="manjericao">Manjericão</label>
+                </div>
+                <div class="btt-style">
+                <input type="checkbox" name="cobertura" id="oregano" value="Orégano" data-group="cobertura">
+                <label for="oregano">Orégano</label>
+                </div>
+                <div class="btt-style">
+                <input type="checkbox" name="cobertura" id="parmesao_cobertura" value="Parmesão ralado" data-group="cobertura">
+                <label for="parmesao_cobertura">Parmesão ralado</label>
+                </div>
+                <div class="btt-style">
+                <input type="checkbox" name="cobertura" id="shimeji" value="Shimeji" data-group="cobertura">
+                <label for="shimeji">Shimeji</label>
+                </div>
+                <div class="btt-style">
+                <input type="checkbox" name="cobertura" id="pimentao" value="Pimentão" data-group="cobertura">
+                <label for="pimentao">Pimentão</label>
+                </div>
+                <div class="btt-style">
+                <input type="checkbox" name="cobertura" id="berinjela" value="Berinjela" data-group="cobertura">
+                <label for="berinjela">Berinjela</label>
+                </div>
+                <div class="btt-style">
+                <input type="checkbox" name="cobertura" id="abobrinha" value="Abobrinha" data-group="cobertura">
+                <label for="abobrinha">Abobrinha</label>
+                </div>
+               <div class="btt-style">
+                <input type="checkbox" name="cobertura" id="alcachofra" value="Alcachofra" data-group="cobertura">
+                <label for="alcachofra">Alcachofra</label>
+                </div>
+                <div class="btt-style">
+                <input type="checkbox" name="cobertura" id="figo" value="Figo" data-group="cobertura">
+                <label for="figo">Figo</label>
+                </div>
+                <div class="btt-style">
+                <input type="checkbox" name="cobertura" id="abacaxi" value="Abacaxi" data-group="cobertura">
+                <label for="abacaxi">Abacaxi</label>
+                </div>
+                <div class="btt-style-cancel">
+                <input type="checkbox" name="cobertura" id="semcobertura" value="Sem Cobertura" data-group="cobertura">
+                <label for="semcobertura">Sem cobertura</label>
+                </div>
             </div>
         </div>
         <div class="infosfinais">
             <h4>Resumo da Personalização</h4>
-            <ul>
-                <li><b>Tamanho</b></li>
-                <li><b>Tipo de massa</b></li>
-                <li><b>Recheio</b></li>
-                <li><b>Cobertura</b></li>
-            </ul>
+            <div id="resumoContent">
+            <p style="opacity: 0.5; padding: 2vh 0 2vh;">*Selecione as opções acima para ver o resumo</p>
+            </div>
             <h4>Observações</h4>
             <textarea name="observacoes" id="obspersonalizacao"></textarea>
         </div>
         <div class="alinhabtt"><button type="submit" class="addcarrinho">Adicionar ao carrinho >></button></div>
+        </form>
     </div>
     <!-- Footer -->
     <div class="footer_fundo">
         <div class="container">
             <footer class="py-5">
-                <div class="row">
+                <div class="alignbtts">
                     <div class="col-6 col-md-2 mb-3 ">
                         <div class="principal_footer">
                             <img src="../assets/img/logo.png" style="width: 80%;">
@@ -217,6 +353,7 @@
             </footer>
         </div>
     </div>
+    <script src="assets/publica/infospersonaliza.js"></script>
 </body>
 
 </html>
