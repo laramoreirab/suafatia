@@ -8,6 +8,7 @@ const rotaLogin = require('./rotas/rotaLogin')
 const rotaCarrinho = require('./rotas/rotaCarrinho')
 const rotaProdutos = require('./rotas/rotaProdutos')
 const rotaCadastroLancamento = require('./rotas/rotaCadastroLancamentos')
+const rotaContato = require('./rotas/rotaContato')
 const logger = require('./middlewares/logger')
 const path = require('path');
 
@@ -29,6 +30,8 @@ app.use('/carrinho', rotaCarrinho)
 app.use('/produtos', rotaProdutos)
 
 app.use('/cadastroLancamentos', rotaCadastroLancamento)
+
+app.use('/contato', rotaContato)
 
 app.get('/', (req, res) => {
     res.status(200).send('Página Inicial')

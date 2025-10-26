@@ -84,7 +84,8 @@
                                         <p class="descricaocard"><br>Lombo suíno, catupiry, cebola, queijo e orégano.
                                         </p>
                                         <div class="botaocard">
-                                            <a href="http://localhost:3000/produtos/1"><button><i>Peça Já!</i></button></a>
+                                            <a href="http://localhost:3000/produtos/1"><button><i>Peça
+                                                        Já!</i></button></a>
                                         </div>
                                     </div>
                                     <hr class="linecarrossel">
@@ -94,7 +95,8 @@
                                         <p class="descricaocard">Linguiça toscana, cebola, tomate, queijo, molho de
                                             tomate e azeitonas.</p>
                                         <div class="botaocard">
-                                             <a href="http://localhost:3000/produtos/2"><button><i>Peça Já!</i></button></a>
+                                            <a href="http://localhost:3000/produtos/2"><button><i>Peça
+                                                        Já!</i></button></a>
                                         </div>
                                     </div>
                                     <hr class="linecarrossel">
@@ -105,7 +107,8 @@
                                         <p class="descricaocard">Pepperoni fatiado, queijo mussarela, molho de tomate,
                                             orégano.</p>
                                         <div class="botaocard">
-                                            <a href="http://localhost:3000/produtos/4"><button><i>Peça Já!</i></button></a>
+                                            <a href="http://localhost:3000/produtos/4"><button><i>Peça
+                                                        Já!</i></button></a>
                                         </div>
                                     </div>
                                 </div>
@@ -121,7 +124,8 @@
                                         <p class="descricaocard"><br>Frango desfiado, catupiry, queijo, orégano e molho
                                             branco.</p>
                                         <div class="botaocard">
-                                            <a href="http://localhost:3000/produtos/3"><button><i>Peça Já!</i></button></a>
+                                            <a href="http://localhost:3000/produtos/3"><button><i>Peça
+                                                        Já!</i></button></a>
                                         </div>
                                     </div>
                                     <hr class="linecarrossel">
@@ -132,7 +136,8 @@
                                         <p class="descricaocard">Carne seca, cebola caramelizada, pimentão e azeitona
                                             preta.</p>
                                         <div class="botaocard">
-                                           <a href="http://localhost:3000/produtos/6"><button><i>Peça Já!</i></button></a>
+                                            <a href="http://localhost:3000/produtos/6"><button><i>Peça
+                                                        Já!</i></button></a>
                                         </div>
                                     </div>
                                     <hr class="linecarrossel">
@@ -144,7 +149,8 @@
                                             branco.</p>
 
                                         <div class="botaocard">
-                                            <a href="http://localhost:3000/produtos/5"><button><i>Peça Já!</i></button></a>
+                                            <a href="http://localhost:3000/produtos/5"><button><i>Peça
+                                                        Já!</i></button></a>
                                         </div>
                                     </div>
                                 </div>
@@ -342,12 +348,13 @@
                             <ul class="nav flex-column">
                                 <div class="socialmedia">
                                     <i class="fa-solid fa-phone"></i>
-                                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0">4002 -
+                                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 footerlink">4002 -
                                             8922</a></li>
                                 </div>
                                 <div class="socialmedia">
                                     <i class="fa-brands fa-instagram"></i>
-                                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0">@suafatia</a></li>
+                                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 footerlink">@suafatia</a>
+                                    </li>
                                 </div>
                             </ul>
                         </div>
@@ -356,11 +363,15 @@
                     <div class="col-6 col-md-2 mb-3">
                         <div class="redirecionamento_footer">
                             <ul class="nav flex-column">
-                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Home</a></li>
-                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Cardápio</a>
+                                <li class="nav-item mb-2"><a href="index.html" class="nav-link p-0 footerlink">Home</a>
                                 </li>
-                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Personalize</a></li>
-                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Contato</a>
+                                <li class="nav-item mb-2"><a href="cardapio.html"
+                                        class="nav-link p-0 footerlink">Cardápio</a>
+                                </li>
+                                <li class="nav-item mb-2"><a href="personalizacao.html"
+                                        class="nav-link p-0 footerlink">Personalize</a></li>
+                                <li class="nav-item mb-2"><a href="index.html#contato"
+                                        class="nav-link p-0 footerlink">Contato</a>
                                 </li>
                             </ul>
                         </div>
@@ -370,7 +381,7 @@
                         <form class="cadastro_lancamentos">
                             <p>Cadastre-se para receber lançamentos de novos produtos e promoções!</p>
                             <div class="d-flex flex-column flex-sm-row w-100 gap-2 tllj">
-                                <input id="newsletter1"  type="email" placeholder="Email">
+                                <input id="newsletter1" type="email" placeholder="Email">
                                 <button id="btnCadastrarLancamento" type="button">Cadastre-se</button>
                             </div>
                         </form>
@@ -401,6 +412,36 @@
                 .catch(err => {
                     console.error('Erro:', err);
                     alert('Erro ao cadastrar. Tente novamente.');
+                });
+        });
+
+        // === Formulário de contato ===
+        const formContato = document.querySelector('form[action="#"]'); // seleciona seu form de contato
+        formContato.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const dados = {
+                nome: document.getElementById('nome').value,
+                email: document.getElementById('email').value,
+                telefone: document.getElementById('telefone').value,
+                mensagem: document.getElementById('mensagem').value
+            };
+
+            fetch('http://localhost:3000/contato', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(dados)
+            })
+                .then(res => res.json())
+                .then(data => {
+                    alert(data.mensagem || 'Mensagem enviada com sucesso!');
+                    if (data.sucesso) {
+                        formContato.reset(); // limpa o formulário
+                    }
+                })
+                .catch(err => {
+                    console.error('Erro:', err);
+                    alert('Erro ao enviar a mensagem. Tente novamente.');
                 });
         });
     </script>

@@ -1859,6 +1859,11 @@ footer.col-6.col-md-2.mb-3 {
     width: 30vh;
     margin-top: 15%;
 }
+.footerlink:hover{
+    color: var(--cinza_clarinho);
+    transform: scale(1.06);
+    transition: 0.5s ease;
+}
 
 .cadastro_lancamentos {
     margin-top: 6%;
@@ -1869,6 +1874,7 @@ footer.col-6.col-md-2.mb-3 {
         border-radius: 20px;
         padding-left: 10px;
         width: 35vh;
+        color: var(--branco);
     }
 
     input::placeholder {
@@ -1888,7 +1894,10 @@ footer.col-6.col-md-2.mb-3 {
 
     }
 }
-
+#btnCadastrarLancamento:hover{
+    transform: scale(1.1);
+    transition: 0.6s ease;
+}
 /*---------------------------------------------------------------------------TELA PHONES-------------------------------------------------------------------------------------- */
 
 @media only screen and (max-width: 600px) {
