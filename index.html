@@ -84,7 +84,7 @@
                                         <p class="descricaocard"><br>Lombo suíno, catupiry, cebola, queijo e orégano.
                                         </p>
                                         <div class="botaocard">
-                                            <button><i>Peça Já!</i></button>
+                                            <a href="http://localhost:3000/produtos/1"><button><i>Peça Já!</i></button></a>
                                         </div>
                                     </div>
                                     <hr class="linecarrossel">
@@ -94,7 +94,7 @@
                                         <p class="descricaocard">Linguiça toscana, cebola, tomate, queijo, molho de
                                             tomate e azeitonas.</p>
                                         <div class="botaocard">
-                                            <button><i>Peça Já!</i></button>
+                                             <a href="http://localhost:3000/produtos/2"><button><i>Peça Já!</i></button></a>
                                         </div>
                                     </div>
                                     <hr class="linecarrossel">
@@ -105,7 +105,7 @@
                                         <p class="descricaocard">Pepperoni fatiado, queijo mussarela, molho de tomate,
                                             orégano.</p>
                                         <div class="botaocard">
-                                            <button><i>Peça Já!</i></button>
+                                            <a href="http://localhost:3000/produtos/4"><button><i>Peça Já!</i></button></a>
                                         </div>
                                     </div>
                                 </div>
@@ -121,7 +121,7 @@
                                         <p class="descricaocard"><br>Frango desfiado, catupiry, queijo, orégano e molho
                                             branco.</p>
                                         <div class="botaocard">
-                                            <button><i>Peça Já!</i></button>
+                                            <a href="http://localhost:3000/produtos/3"><button><i>Peça Já!</i></button></a>
                                         </div>
                                     </div>
                                     <hr class="linecarrossel">
@@ -132,7 +132,7 @@
                                         <p class="descricaocard">Carne seca, cebola caramelizada, pimentão e azeitona
                                             preta.</p>
                                         <div class="botaocard">
-                                            <button><i>Peça Já!</i></button>
+                                           <a href="http://localhost:3000/produtos/6"><button><i>Peça Já!</i></button></a>
                                         </div>
                                     </div>
                                     <hr class="linecarrossel">
@@ -144,7 +144,7 @@
                                             branco.</p>
 
                                         <div class="botaocard">
-                                            <button><i>Peça Já!</i></button>
+                                            <a href="http://localhost:3000/produtos/5"><button><i>Peça Já!</i></button></a>
                                         </div>
                                     </div>
                                 </div>
@@ -370,8 +370,8 @@
                         <form class="cadastro_lancamentos">
                             <p>Cadastre-se para receber lançamentos de novos produtos e promoções!</p>
                             <div class="d-flex flex-column flex-sm-row w-100 gap-2 tllj">
-                                <input id="newsletter1" type="email" placeholder="Email">
-                                <button type="button">Cadastre-se</button>
+                                <input id="newsletter1"  type="email" placeholder="Email">
+                                <button id="btnCadastrarLancamento" type="button">Cadastre-se</button>
                             </div>
                         </form>
                     </div>
@@ -384,7 +384,26 @@
             </footer>
         </div>
     </div>
+    <script>
+        document.getElementById('btnCadastrarLancamento').addEventListener('click', () => {
+            const email = document.getElementById('newsletter1').value.trim();
 
+            fetch('http://localhost:3000/cadastroLancamentos', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email })
+            })
+                .then(res => res.json())
+                .then(data => {
+                    alert(data.message || 'Cadastro realizado com sucesso!');
+                    document.getElementById('newsletter1').value = '';
+                })
+                .catch(err => {
+                    console.error('Erro:', err);
+                    alert('Erro ao cadastrar. Tente novamente.');
+                });
+        });
+    </script>
 </body>
 
 </html>

@@ -326,22 +326,28 @@ nav {
 }
 
 .redirecionamentochatbot {
-  position: fixed;
-  bottom: 20px;     /* distância do fundo da tela */
-  right: 20px;       /* distância da borda esquerda */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 1rem;
-  z-index: 9999;    /* garante que fique acima de outros elementos */
-  img{
-    width: 150%;   
-  }
+    position: fixed;
+    bottom: 20px;
+    /* distância do fundo da tela */
+    right: 20px;
+    /* distância da borda esquerda */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+    z-index: 9999;
+
+    /* garante que fique acima de outros elementos */
+    img {
+        width: 150%;
+    }
 }
-.redirecionamentochatbot:hover{
+
+.redirecionamentochatbot:hover {
     transform: scale(1.1);
     transition: 1s ease;
 }
+
 /*----------------------------------------------------------------- Feito com Amor ---------------------------------------------------------------------*/
 #feitocomamor {
     margin-top: 16vh;
@@ -1255,6 +1261,7 @@ nav {
     }
 }
 
+
 /* ------------------------------------------------------------ Login ------------------------------------------------------*/
 #body_login {
     background-image: url(../img/login/bgdesktoplogin.svg);
@@ -1512,6 +1519,15 @@ nav {
 
 .img_informacoes {
     margin-top: 25vh;
+
+    img {
+        width: 100%;
+        height: auto;
+        display: block;
+        opacity: 1;
+        visibility: visible;
+
+    }
 }
 
 .informacoes_produto {
@@ -2377,7 +2393,7 @@ footer.col-6.col-md-2.mb-3 {
     }
 
 
-    /*--------------------------------------------- Cardápio - Tela ---------------------------------------*/
+    /*--------------------------------------------- Cardápio - Phone ---------------------------------------*/
     #body_cardapio {
         background: linear-gradient(90deg, var(--preto_acizentado), var(--preto));
         background-repeat: no-repeat;
@@ -2575,7 +2591,7 @@ footer.col-6.col-md-2.mb-3 {
 
     .img_informacoes {
         height: 5vh;
-        margin: 15vh 0 0 1rem;
+        margin: 8vh 0 2rem 1rem;
 
         img {
             width: 80%;

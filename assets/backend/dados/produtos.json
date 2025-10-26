@@ -2,169 +2,169 @@
   {
     "id": 1,
     "nomeproduto": "Lombo",
-    "descrição": "Uma combinação sofisticada de lombo suíno fatiado e lentamente assado, sobre um leito de mussarela derretida e molho de tomate artesanal. Finalizada com orégano fresco, entrega um sabor marcante e elegante a cada mordida.",
-    "preço": 47.90,
-    "imagem": "../img/pizzas/lombo.svg"
+    "descricao": "Uma combinação sofisticada de lombo suíno fatiado e lentamente assado, sobre um leito de mussarela derretida e molho de tomate artesanal. Finalizada com orégano fresco, entrega um sabor marcante e elegante a cada mordida.",
+    "preco": "47.90",
+    "imagem": "/assets/img/pizzas/lombo.svg"
   },
   {
     "id": 2,
     "nomeproduto": "Toscana",
-    "descrição": "Inspirada nas colinas italianas, a Toscana combina linguiça artesanal levemente defumada, cebolas douradas e mussarela cremosa sobre um molho rústico de tomates pelati. Um sabor intenso e equilibrado.",
-    "preço": 46.90,
-    "imagem": "../img/pizzas/toscana.svg"
+    "descricao": "Inspirada nas colinas italianas, a Toscana combina linguiça artesanal levemente defumada, cebolas douradas e mussarela cremosa sobre um molho rústico de tomates pelati. Um sabor intenso e equilibrado.",
+    "preco": "46.90",
+    "imagem": "/assets/img/pizzas/toscana.svg"
   },
   {
     "id": 3,
     "nomeproduto": "Frango",
-    "descrição": "Delicadas lascas de frango desfiado e temperado com ervas finas, envoltas em catupiry original e mussarela gratinada. Um clássico que une leveza e cremosidade em perfeita harmonia.",
-    "preço": 44.90,
-    "imagem": "../img/pizzas/frango.svg"
+    "descricao": "Delicadas lascas de frango desfiado e temperado com ervas finas, envoltas em catupiry original e mussarela gratinada. Um clássico que une leveza e cremosidade em perfeita harmonia.",
+    "preco": "44.90",
+    "imagem": "/assets/img/pizzas/frango.svg"
   },
   {
     "id": 4,
     "nomeproduto": "Pepperoni",
-    "descrição": "Sabor autêntico e picante: finas fatias de pepperoni premium sobre mussarela fundida e molho de tomate fresco. Uma pizza clássica e irresistível, de aroma envolvente e textura crocante.",
-    "preço": 49.90,
-    "imagem": "../img/pizzas/pepperoni.svg"
+    "descricao": "Sabor autêntico e picante: finas fatias de pepperoni premium sobre mussarela fundida e molho de tomate fresco. Uma pizza clássica e irresistível, de aroma envolvente e textura crocante.",
+    "preco": "49.90",
+    "imagem": "/assets/img/pizzas/pepperoni.svg"
   },
   {
     "id": 5,
     "nomeproduto": "Quatro Queijos",
-    "descrição": "Uma sinfonia cremosa de queijos finos — mussarela, provolone, parmesão e gorgonzola — que se fundem em uma textura aveludada. Um deleite para os verdadeiros apreciadores do sabor lácteo.",
-    "preço": 48.90,
-    "imagem": "../img/pizzas/4queijos.svg"
+    "descricao": "Uma sinfonia cremosa de queijos finos — mussarela, provolone, parmesão e gorgonzola — que se fundem em uma textura aveludada. Um deleite para os verdadeiros apreciadores do sabor lácteo.",
+    "preco": "48.90",
+    "imagem": "/assets/img/pizzas/quatroqueijos.svg"
   },
   {
     "id": 6,
     "nomeproduto": "Carne Seca",
-    "descrição": "Carne seca artesanalmente desfiada e refogada lentamente, combinada com catupiry e cebolas caramelizadas. Uma fusão de sabores típicos brasileiros em uma versão refinada e irresistível.",
-    "preço": 49.90,
-    "imagem": "../img/pizzas/carneseca.svg"
+    "descricao": "Carne seca artesanalmente desfiada e refogada lentamente, combinada com catupiry e cebolas caramelizadas. Uma fusão de sabores típicos brasileiros em uma versão refinada e irresistível.",
+    "preco": "49.90",
+    "imagem": "/assets/img/pizzas/carneseca.svg"
   },
   {
     "id": 7,
     "nomeproduto": "Calabresa",
-    "descrição": "A tradicional calabresa ganha um toque gourmet: fatias finas e suculentas, levemente defumadas, sobre queijo mussarela e cebolas frescas. Um clássico elevado à perfeição.",
-    "preço": 44.90,
-    "imagem": "../img/pizzas/calabresa.svg"
+    "descricao": "A tradicional calabresa ganha um toque gourmet: fatias finas e suculentas, levemente defumadas, sobre queijo mussarela e cebolas frescas. Um clássico elevado à perfeição.",
+    "preco": "44.90",
+    "imagem": "/assets/img/pizzas/calabresa.svg"
   },
   {
     "id": 8,
     "nomeproduto": "Atum",
-    "descrição": "Atum selecionado em lascas, cebolas finamente cortadas e queijo mussarela de primeira qualidade. Um sabor equilibrado e sofisticado, com notas do mar em harmonia com o toque cremoso do queijo.",
-    "preço": 46.90,
-    "imagem": "../img/pizzas/atum.svg"
+    "descricao": "Atum selecionado em lascas, cebolas finamente cortadas e queijo mussarela de primeira qualidade. Um sabor equilibrado e sofisticado, com notas do mar em harmonia com o toque cremoso do queijo.",
+    "preco": "46.90",
+    "imagem": "/assets/img/pizzas/atum.svg"
   },
   {
     "id": 9,
     "nomeproduto": "Napolitana",
-    "descrição": "Um ícone da tradição italiana: molho de tomates frescos, fatias de tomate, queijo mussarela e parmesão ralado, finalizados com manjericão fresco e azeite extravirgem.",
-    "preço": 45.90,
-    "imagem": "../img/pizzas/napolitana.svg"
+    "descricao": "Um ícone da tradição italiana: molho de tomates frescos, fatias de tomate, queijo mussarela e parmesão ralado, finalizados com manjericão fresco e azeite extravirgem.",
+    "preco": "45.90",
+    "imagem": "/assets/img/pizzas/napolitana.svg"
   },
   {
     "id": 10,
     "nomeproduto": "Bacon",
-    "descrição": "Cubos de bacon crocante e defumado, dispostos sobre mussarela cremosa e molho artesanal. Um contraste perfeito entre o sabor salgado e a textura delicadamente amanteigada do queijo.",
-    "preço": 47.90,
-    "imagem": "../img/pizzas/bacon.svg"
+    "descricao": "Cubos de bacon crocante e defumado, dispostos sobre mussarela cremosa e molho artesanal. Um contraste perfeito entre o sabor salgado e a textura delicadamente amanteigada do queijo.",
+    "preco": "47.90",
+    "imagem": "/assets/img/pizzas/bacon.svg"
   },
   {
     "id": 11,
     "nomeproduto": "Portuguesa",
-    "descrição": "Uma combinação clássica e requintada de presunto, ovos, cebola, pimentão, ervilhas e mussarela, equilibrada por notas suaves de orégano e azeitonas pretas.",
-    "preço": 46.90,
-    "imagem": "../img/pizzas/portuguesa.svg"
+    "descricao": "Uma combinação clássica e requintada de presunto, ovos, cebola, pimentão, ervilhas e mussarela, equilibrada por notas suaves de orégano e azeitonas pretas.",
+    "preco": "46.90",
+    "imagem": "/assets/img/pizzas/portuguesa.svg"
   },
   {
     "id": 12,
     "nomeproduto": "Marguerita",
-    "descrição": "A verdadeira essência italiana: molho de tomate artesanal, mussarela de búfala, folhas de manjericão fresco e um fio de azeite extravirgem. Simples, aromática e absolutamente elegante.",
-    "preço": 47.90,
-    "imagem": "../img/pizzas/marguerita.svg"
+    "descricao": "A verdadeira essência italiana: molho de tomate artesanal, mussarela de búfala, folhas de manjericão fresco e um fio de azeite extravirgem. Simples, aromática e absolutamente elegante.",
+    "preco": "47.90",
+    "imagem": "/assets/img/pizzas/marguerita.svg"
   },
   {
     "id": 13,
     "nomeproduto": "Mexicana",
-    "descrição": "Carne moída temperada com especiarias mexicanas, pimentas suaves, milho e queijo cheddar. Uma explosão de sabores vibrantes com um toque picante e irresistível.",
-    "preço": 48.90,
-    "imagem": "../img/pizzas/mexicana.svg"
+    "descricao": "Carne moída temperada com especiarias mexicanas, pimentas suaves, milho e queijo cheddar. Uma explosão de sabores vibrantes com um toque picante e irresistível.",
+    "preco": "48.90",
+    "imagem": "/assets/img/pizzas/mexicana.svg"
   },
   {
     "id": 14,
     "nomeproduto": "Rúcula",
-    "descrição": "Base cremosa de mussarela, coberta por folhas frescas de rúcula e tomates secos. Uma combinação leve, aromática e sofisticada, perfeita para paladares exigentes.",
-    "preço": 46.90,
-    "imagem": "../img/pizzas/rucula.svg"
+    "descricao": "Base cremosa de mussarela, coberta por folhas frescas de rúcula e tomates secos. Uma combinação leve, aromática e sofisticada, perfeita para paladares exigentes.",
+    "preco": "46.90",
+    "imagem": "/assets/img/pizzas/rucula.svg"
   },
   {
     "id": 15,
     "nomeproduto": "Milho",
-    "descrição": "Grãos de milho doce e crocantes sobre mussarela derretida e molho artesanal. Um sabor suave e reconfortante que encanta pela simplicidade elegante.",
-    "preço": 42.90,
-    "imagem": "../img/pizzas/milho.svg"
+    "descricao": "Grãos de milho doce e crocantes sobre mussarela derretida e molho artesanal. Um sabor suave e reconfortante que encanta pela simplicidade elegante.",
+    "preco": "42.90",
+    "imagem": "/assets/img/pizzas/milho.svg"
   },
   {
     "id": 16,
     "nomeproduto": "Bruschetta",
-    "descrição": "Inspirada no clássico italiano, esta pizza traz tomates frescos picados, alho, manjericão e azeite extravirgem sobre uma base crocante e queijo fundido. Leve, aromática e irresistível.",
-    "preço": 45.90,
-    "imagem": "../img/pizzas/bruschetta.svg"
+    "descricao": "Inspirada no clássico italiano, esta pizza traz tomates frescos picados, alho, manjericão e azeite extravirgem sobre uma base crocante e queijo fundido. Leve, aromática e irresistível.",
+    "preco": "45.90",
+    "imagem": "/assets/img/pizzas/bruschetta.svg"
   },
   {
     "id": 17,
     "nomeproduto": "Escarola",
-    "descrição": "Escarola fresca refogada com alho dourado e azeite, coberta com mussarela e finalizada com orégano. Uma pizza de sabor refinado e textura delicadamente vegetal.",
-    "preço": 44.90,
-    "imagem": "../img/pizzas/escarola.svg"
+    "descricao": "Escarola fresca refogada com alho dourado e azeite, coberta com mussarela e finalizada com orégano. Uma pizza de sabor refinado e textura delicadamente vegetal.",
+    "preco": "44.90",
+    "imagem": "/assets/img/pizzas/escarola.svg"
   },
   {
     "id": 18,
     "nomeproduto": "Palmito",
-    "descrição": "Rodelas de palmito nobre sobre um suave molho branco e mussarela gratinada. Uma opção sofisticada e delicada que destaca a leveza do ingrediente principal.",
-    "preço": 47.90,
-    "imagem": "../img/pizzas/palmito.svg"
+    "descricao": "Rodelas de palmito nobre sobre um suave molho branco e mussarela gratinada. Uma opção sofisticada e delicada que destaca a leveza do ingrediente principal.",
+    "preco": "47.90",
+    "imagem": "/assets/img/pizzas/palmito.svg"
   },
   {
     "id": 19,
     "nomeproduto": "Vegetariana",
-    "descrição": "Uma explosão de cores e sabores com legumes frescos grelhados — pimentões, cebolas, tomates e azeitonas — sobre queijo mussarela e molho artesanal. Leve, nutritiva e elegante.",
-    "preço": 45.90,
-    "imagem": "../img/pizzas/vegetariana.svg"
+    "descricao": "Uma explosão de cores e sabores com legumes frescos grelhados — pimentões, cebolas, tomates e azeitonas — sobre queijo mussarela e molho artesanal. Leve, nutritiva e elegante.",
+    "preco": "45.90",
+    "imagem": "/assets/img/pizzas/vegetariana.svg"
   },
   {
     "id": 20,
     "nomeproduto": "Picanha",
-    "descrição": "Tiras suculentas de picanha grelhada, sobre mussarela fundida e toque de alho dourado. Um sabor encorpado e sofisticado, digno de um verdadeiro banquete gourmet.",
-    "preço": 52.90,
-    "imagem": "../img/pizzas/picanha.svg"
+    "descricao": "Tiras suculentas de picanha grelhada, sobre mussarela fundida e toque de alho dourado. Um sabor encorpado e sofisticado, digno de um verdadeiro banquete gourmet.",
+    "preco": "52.90",
+    "imagem": "/assets/img/pizzas/picanha.svg"
   },
   {
     "id": 21,
     "nomeproduto": "Brócolis",
-    "descrição": "Brócolis frescos refogados no azeite com alho, cobertos com catupiry cremoso e mussarela. Um equilíbrio perfeito entre frescor vegetal e textura aveludada.",
-    "preço": 46.90,
-    "imagem": "../img/pizzas/brocolis.svg"
+    "descricao": "Brócolis frescos refogados no azeite com alho, cobertos com catupiry cremoso e mussarela. Um equilíbrio perfeito entre frescor vegetal e textura aveludada.",
+    "preco": "46.90",
+    "imagem": "/assets/img/pizzas/brocolis.svg"
   },
   {
     "id": 22,
     "nomeproduto": "Alcachofras",
-    "descrição": "Corações de alcachofra marinados em azeite e ervas finas, dispostos sobre mussarela derretida e finalizados com lascas de parmesão. Um sabor nobre e delicadamente sofisticado.",
-    "preço": 53.90,
-    "imagem": "../img/pizzas/alcachofras.svg"
+    "descricao": "Corações de alcachofra marinados em azeite e ervas finas, dispostos sobre mussarela derretida e finalizados com lascas de parmesão. Um sabor nobre e delicadamente sofisticado.",
+    "preco": "53.90",
+    "imagem": "/assets/img/pizzas/alcachofras.svg"
   },
   {
     "id": 23,
     "nomeproduto": "Shimeji",
-    "descrição": "Shimejis salteados na manteiga com shoyu e gergelim, sobre mussarela e toque de cebolinha. Uma fusão oriental que transforma cada fatia em uma experiência gourmet.",
-    "preço": 51.90,
-    "imagem": "../img/pizzas/shimeji.svg"
+    "descricao": "Shimejis salteados na manteiga com shoyu e gergelim, sobre mussarela e toque de cebolinha. Uma fusão oriental que transforma cada fatia em uma experiência gourmet.",
+    "preco": "51.90",
+    "imagem": "/assets/img/pizzas/shimeji.svg"
   },
   {
     "id": 24,
     "nomeproduto": "Camarão",
-    "descrição": "Camarões grelhados ao alho e azeite, dispostos sobre um delicado creme de catupiry e mussarela. Uma pizza exuberante, de sabor refinado e aroma marcante do mar.",
-    "preço": 56.90,
-    "imagem": "../img/pizzas/camarao.svg"
+    "descricao": "Camarões grelhados ao alho e azeite, dispostos sobre um delicado creme de catupiry e mussarela. Uma pizza exuberante, de sabor refinado e aroma marcante do mar.",
+    "preco": "56.90",
+    "imagem": "/assets/img/pizzas/camarao.svg"
   }
 ]
