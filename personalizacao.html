@@ -71,20 +71,32 @@
             <div class="passo">
                 <h5>1° Passo</h5>
                 <h3>Escolha o tamanho</h3>
-                <div class="alignbtts">
-                    <div class="btt-style">
-                        <input type="radio" name="tamanho" id="grande" value="Pequena" value="Grande" required>
-                        <label for="grande">Grande</label>
+                <div class="row">
+                    <div class="alignbtts">
+                        <div class="col-6 col-md-3">
+                            <div class="btt-style">
+                                <input type="radio" name="tamanho" id="grande" value="Pequena" value="Grande" required>
+                                <label for="grande">Grande</label>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="btt-style">
+                                <input type="radio" name="tamanho" id="media" value="Média" required>
+                                <label for="media">Média</label>
+                            </div>
+                        </div>
+
+                        <div class="col-6 col-md-3">
+                            <div class="btt-style">
+                                <input type="radio" name="tamanho" id="pequeno" value="Pequeno" required>
+                                <label for="pequeno">Pequeno</label>
+                            </div>
+                        </div>
+
                     </div>
-                    <div class="btt-style">
-                        <input type="radio" name="tamanho" id="media" value="Média" required>
-                        <label for="media">Média</label>
-                    </div>
-                    <div class="btt-style">
-                        <input type="radio" name="tamanho" id="pequeno" value="Pequeno" required>
-                        <label for="pequeno">Pequeno</label>
-                    </div>
+
                 </div>
+
             </div>
             <div class="passo">
                 <h5>2° Passo</h5>
@@ -303,7 +315,7 @@
             <div class="alinhabtt"><button type="submit" class="addcarrinho">Adicionar ao carrinho >></button></div>
         </form>
     </div>
-        <!-- Footer -->
+    <!-- Footer -->
     <div class="footer_fundo">
         <div class="container">
             <footer class="py-5">
@@ -325,7 +337,8 @@
                                 </div>
                                 <div class="socialmedia">
                                     <i class="fa-brands fa-instagram"></i>
-                                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 footerlink">@suafatia</a></li>
+                                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 footerlink">@suafatia</a>
+                                    </li>
                                 </div>
                             </ul>
                         </div>
@@ -334,11 +347,15 @@
                     <div class="col-6 col-md-2 mb-3">
                         <div class="redirecionamento_footer">
                             <ul class="nav flex-column">
-                                <li class="nav-item mb-2"><a href="index.html" class="nav-link p-0 footerlink">Home</a></li>
-                                <li class="nav-item mb-2"><a href="cardapio.html" class="nav-link p-0 footerlink">Cardápio</a>
+                                <li class="nav-item mb-2"><a href="index.html" class="nav-link p-0 footerlink">Home</a>
                                 </li>
-                                <li class="nav-item mb-2"><a href="personalizacao.html" class="nav-link p-0 footerlink">Personalize</a></li>
-                                <li class="nav-item mb-2"><a href="index.html#contato" class="nav-link p-0 footerlink">Contato</a>
+                                <li class="nav-item mb-2"><a href="cardapio.html"
+                                        class="nav-link p-0 footerlink">Cardápio</a>
+                                </li>
+                                <li class="nav-item mb-2"><a href="personalizacao.html"
+                                        class="nav-link p-0 footerlink">Personalize</a></li>
+                                <li class="nav-item mb-2"><a href="index.html#contato"
+                                        class="nav-link p-0 footerlink">Contato</a>
                                 </li>
                             </ul>
                         </div>
@@ -348,7 +365,7 @@
                         <form class="cadastro_lancamentos">
                             <p>Cadastre-se para receber lançamentos de novos produtos e promoções!</p>
                             <div class="d-flex flex-column flex-sm-row w-100 gap-2 tllj">
-                                <input id="newsletter1"  type="email" placeholder="Email">
+                                <input id="newsletter1" type="email" placeholder="Email">
                                 <button id="btnCadastrarLancamento" type="button">Cadastre-se</button>
                             </div>
                         </form>

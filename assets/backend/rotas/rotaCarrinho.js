@@ -6,7 +6,7 @@ const router = express.Router()
 router.get('/', verificarToken, (req,res)=>{
     const userId = req.userId
 
-    const carrinho = carrinhos.find(c => c.usuarioId == userId)
+    const carrinho = carrinhos.find(c => c.usuarioId === userId)
 
     res.json(carrinho || { itens: [] })
 })

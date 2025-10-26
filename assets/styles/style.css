@@ -2581,7 +2581,7 @@ footer.col-6.col-md-2.mb-3 {
         }
     }
 
-    /*--------------------------------------------- Cadastro ---------------------------------------*/
+    /*--------------------------------------------- Cadastro - Phone ---------------------------------------*/
     #body_cadastro {
         background-image: url(../img/cadastro/bgmobilecadastro.svg);
         background-repeat: no-repeat;
@@ -2639,7 +2639,7 @@ footer.col-6.col-md-2.mb-3 {
         }
     }
 
-    /*---------------------------------- Informações ------------------------ */
+    /*---------------------------------- Informações - Phone ------------------------ */
     #body_informacoes {
         background: linear-gradient(90deg, var(--preto_acizentado), var(--preto));
     }
@@ -2659,7 +2659,7 @@ footer.col-6.col-md-2.mb-3 {
         padding: 1rem;
     }
 
-    /*---------------------------------- Footer ------------------------ */
+    /*---------------------------------- Footer - Phone ------------------------ */
     .socialmedia2 {
         margin-left: 2rem;
     }
@@ -2706,4 +2706,42 @@ footer.col-6.col-md-2.mb-3 {
         align-items: center;
         align-content: center;
     }
+    /*---------------------------------- Personalize - Phone ------------------------ */
+    .persona{
+        padding: 0;
+        margin: 0;
+    }
+    .imgbackpersonal{
+        display: none;
+    }
+    .container-fluid.persona{
+        background-image: url(../img/personalizacao/backpersona.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        top: -8vh;
+        height: 40vh;
+        margin: 0;
+    }
+    .criesuaobra{
+        font-size: 3rem;
+        position: relative;
+        z-index: 10;
+        margin-top: 8vh;
+    }
+    .borda-superior{
+        margin: -10vh;
+        padding: 0 1rem 0 1rem;
+        margin: 0 3rem 0 3rem;
+        position: none;
+        min-height: 10vh;
+    }
+    .btt-style{
+        left:2rem;
+        right:2rem;
+    }
+    .container-fluid.cont-passospersona {
+        bottom:0;
+    }
+
 }
