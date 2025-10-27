@@ -27,53 +27,37 @@ router.get('/', verificarToken, async (req, res) => {
 // POST - Adicionar item ao carrinho 
 router.post('/adicionar', verificarToken, async (req, res) => {
     try {
-        const userId = req.userId
-        const novoItem = req.body
-        
-        // Validação
-        if (!novoItem.nome || !novoItem.preco) {
-            return res.status(400).json({ erro: 'Nome e preço são obrigatórios' })
-        }
-        
-        // Lê o arquivo
+        const userId = req.userId;
+         const  {id, quantidade, nome, preco, imagem } = req.body;
+
         const data = await fs.readFile('./dados/carrinho.json', 'utf8')
-        let carrinhos = JSON.parse(data)
+        const carrinhos = JSON.parse(data)
         
         // Procura carrinho do usuário
-        let carrinhoUsuario = carrinhos.find(c => c.usuarioId === userId)
+        const carrinhoUsuario = carrinhos.find(c => c.usuarioId === userId)
         
         if (!carrinhoUsuario) {
-            // Cria novo carrinho
-            carrinhoUsuario = {
-                usuarioId: userId,
-                itens: [],
-                total: 0,
-                dataAtualizacao: new Date().toISOString()
-            }
-            carrinhos.push(carrinhoUsuario)
+            return res.status(500).json({ erro: 'Erro ao buscar carrinho' })
         }
-        
-        // Adiciona ID único ao item se não tiver
-        if (!novoItem.id) {
-            novoItem.id = `item_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-        }
-        
-        // Quantidade padrão
-        if (!novoItem.quantidade) {
-            novoItem.quantidade = 1
-        }
-        
-        // Adiciona o item
-        carrinhoUsuario.itens.push(novoItem)
-        
-        // Recalcula o total
-        carrinhoUsuario.total = carrinhoUsuario.itens.reduce(
-            (soma, item) => soma + (parseFloat(item.preco) * item.quantidade), 
-            0
-        )
-        
-        carrinhoUsuario.dataAtualizacao = new Date().toISOString()
-        
+
+        if (carrinhoUsuario) {
+      // Usuário já tem carrinho - verifica se item já existe
+      const itemExistente = carrinhoUsuario.itens.find(item => item.id === id);
+      
+      if (itemExistente) {
+        // Atualiza quantidade se item já existe
+        itemExistente.quantidade += parseInt(quantidade);
+      } else {
+        // Adiciona novo item ao array de itens
+        carrinhoUsuario.itens.push({
+          id,
+          quantidade: parseInt(quantidade),
+          nome,
+          preco,
+          imagem
+        });
+      }
+    }    
         // Salva
         await fs.writeFile('./dados/carrinho.json', JSON.stringify(carrinhos, null, 2))
         

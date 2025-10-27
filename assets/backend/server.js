@@ -13,7 +13,7 @@ const logger = require('./middlewares/logger')
 const path = require('path');
 
 app.use(cors({
-  origin: 'http://localhost:5500'
+  origin: 'http://localhost:3000'
 }));
 app.use(express.static(path.join(__dirname, '../../')));
 app.use('/assets', express.static(path.join(__dirname, '../', '../assets')));

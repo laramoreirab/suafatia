@@ -24,78 +24,78 @@ router.get('/:id', async (req, res) => {
 
     // --- Lê o HTML base ---
     let html = await fs.readFile(CAMINHO_HTML, 'utf-8');
+    const scriptContent = `
+      // Dados do produto
+      const produtoAtual = ${JSON.stringify({
+        id: produto.id,
+        nome: produto.nomeproduto,
+        descricao: produto.descricao,
+        preco: produto.preco,
+        imagem: produto.imagem
+      })};
 
-    // --- Insere os dados do produto ---
-    html = html.replace('</head>', `
-      <script>
-        document.addEventListener('DOMContentLoaded', () => {
-          document.querySelector('.titulo_informacoes').textContent = "${produto.nomeproduto}";
-          document.querySelector('.descricao_informacoes').textContent = "${produto.descricao}";
-          document.querySelector('.img_informacoes img').src = "${produto.imagem}";
-          ${produto.preco ? `document.querySelector('.preco_informacoes').textContent = "R$ ${produto.preco}";` : ''}
-        });
-
-        // === ADICIONAR AO CARRINHO COM AUTENTICAÇÃO ===
-          const btnAdicionar = document.querySelector('.addcarrinho_informacoes');
-          const inputQuantidade = document.getElementById('quantidade-input');
-
-          btnAdicionar.addEventListener('click', async () => {
-            // Verifica se está logado
-            const token = localStorage.getItem('token');
-            if (!token) {
-              alert('Você precisa fazer login para adicionar ao carrinho!');
-              window.location.href = 'http://localhost:5500/login.html';
+      document.addEventListener('DOMContentLoaded', function() {
+        // Preenche os dados na página
+        if (document.querySelector('.titulo_informacoes')) {
+          document.querySelector('.titulo_informacoes').textContent = produtoAtual.nome;
+        }
+        if (document.querySelector('.descricao_informacoes')) {
+          document.querySelector('.descricao_informacoes').textContent = produtoAtual.descricao;
+        }
+        if (document.querySelector('.img_informacoes img')) {
+          document.querySelector('.img_informacoes img').src = produtoAtual.imagem;
+        }
+        if (produtoAtual.preco && document.querySelector('.preco_informacoes')) {
+          document.querySelector('.preco_informacoes').textContent = 'R$ ' + produtoAtual.preco;
+        }
+        
+        // Adiciona evento ao botão de adicionar ao carrinho
+        const botaoAdicionar = document.querySelector('.ddcarrinho_informacoes');
+        if (botaoAdicionar) {
+          botaoAdicionar.addEventListener('click', async function() {
+            const inputQuantidade = document.getElementById('quantidade-input').value;
+            const quantidade = inputQuantidade ? parseInt(inputQuantidade.value) || 1 : 1;
+            const usuarioId = localStorage.getItem('id');
+            
+            if (!usuarioId) {
+              alert('Por favor, faça login para adicionar itens ao carrinho');
               return;
             }
 
-            // Pega a quantidade
-            const quantidade = parseInt(inputQuantidade.value) || 1;
-
-            // Monta o objeto do produto
-            const itemCarrinho = {
-              id: 'prod_' + produtoAtual.id + '_' + Date.now(),
-              nome: produtoAtual.nome,
-              preco: produtoAtual.preco,
-              quantidade: quantidade,
-              imagem: produtoAtual.imagem,
-              tipo: 'pizza_pronta'
-            };
-
             try {
-              const response = await fetch('http://localhost:3000/carrinho/adicionar', {
+              const resposta = await fetch('http://localhost:3000/carrinho/adicionar', {
                 method: 'POST',
                 headers: {
                   'Content-Type': 'application/json',
-                  'Authorization': 'Bearer ' + token
                 },
-                body: JSON.stringify(itemCarrinho)
+                body: JSON.stringify({
+                  usuarioId: usuarioId,
+                  id: produtoAtual.id,
+                  nome: produtoAtual.nome,
+                  preco: produtoAtual.preco,
+                  imagem: produtoAtual.imagem,
+                  quantidade: quantidade
+                })
               });
-
-              const resultado = await response.json();
-
-                if (response.ok) {
-                alert('✅ ' + resultado.message);
-                // Reseta quantidade
-                inputQuantidade.value = 1;
+              
+              const resultado = await resposta.json();
+              
+              if (resposta.ok) {
+                alert('Produto adicionado ao carrinho!');
               } else {
-                if (response.status === 401) {
-                  alert('Sessão expirada. Faça login novamente.');
-                  localStorage.removeItem('token');
-                  localStorage.removeItem('usuario');
-                  window.location.href = 'http://localhost:5500/login.html';
-                } else {
-                  alert('Erro: ' + resultado.erro);
-                }
+                alert('Erro: ' + resultado.erro);
               }
             } catch (erro) {
               console.error('Erro:', erro);
-              alert('Erro ao adicionar ao carrinho');
+              alert('Erro ao adicionar produto ao carrinho');
             }
           });
-        });
+        }
+      });
+    `;
 
-      </script>
-    </head>`);
+    // --- Insere o script no HTML ---
+    html = html.replace('</head>', `<script>${scriptContent}</script></head>`);
 
     // --- Envia o HTML renderizado ---
     res.send(html);

@@ -534,15 +534,18 @@ nav {
 }
 
 /* ------------------------------------------------------------ Personalização ------------------------------------------------------*/
-body.persona{
+body.persona {
     overflow-x: hidden;
 }
-.container-fluid.persona{
+
+.container-fluid.persona {
     padding: 0;
 }
+
 .imgbackpersonal {
     width: 100%;
 }
+
 .criesuaobra {
     font-family: var(--adventure_fonte);
     font-size: 25vh;
@@ -610,18 +613,20 @@ body.persona{
         list-style-type: none;
     }
 
-    .alignbtts{
+    .alignbtts {
         padding-top: 4.5vh;
         display: flex;
-        justify-content: flex-start;
-        flex-wrap: wrap;
+        /* justify-content: flex-start;
+        flex-wrap: wrap; */
     }
-    .btt-style{
+
+    .btt-style {
         position: relative;
         margin-right: 3vh;
         margin-bottom: 3vh;
     }
-    .btt-style label{
+
+    .btt-style label {
         font-family: var(--montserrat_fonte);
         display: block;
         width: 27vh;
@@ -636,29 +641,30 @@ body.persona{
         padding-top: 2.5vh;
     }
 
-        .btt-style input[type="radio"],
-        .btt-style-cancel input[type="radio"],
-        .btt-style-cancel input[type="checkbox"],
-        .btt-style input[type="checkbox"] {
-            position: absolute;
-            left: 3vh;
-            opacity: 0;
-            pointer-events: none;
-        }
+    .btt-style input[type="radio"],
+    .btt-style-cancel input[type="radio"],
+    .btt-style-cancel input[type="checkbox"],
+    .btt-style input[type="checkbox"] {
+        position: absolute;
+        left: 3vh;
+        opacity: 0;
+        pointer-events: none;
+    }
 
-    .btt-style input:checked + label{
+    .btt-style input:checked+label {
         transform: scale(1.05);
         background-color: #ffde59ce;
     }
 
-    .btt-style input:disabled + label{
-          opacity: 0.5;
-            cursor: not-allowed;
-            background: #e9ecef;
+    .btt-style input:disabled+label {
+        opacity: 0.5;
+        cursor: not-allowed;
+        background: #e9ecef;
 
     }
-    .btt-style label:hover:not(.disable){
-            background-color: #ffde59ce;
+
+    .btt-style label:hover:not(.disable) {
+        background-color: #ffde59ce;
     }
 
     .btt-style:hover {
@@ -679,28 +685,32 @@ body.persona{
         background-color: #e6e6e6;
         font-size: 2.3vh;
         transition: .3s;
-         text-align: center;
+        text-align: center;
         padding-top: 2.5vh;
     }
 
-    .btt-style-cancel label:hover{
+    .btt-style-cancel label:hover {
         background-color: #bebebe;
         transform: scale(1.05);
         border-radius: 0.5rem;
     }
-    .btt-style-cancel input:checked + label{
+
+    .btt-style-cancel input:checked+label {
         transform: scale(1.05);
         background-color: #bebebe;
     }
-    .btt-style-cancel input:disabled + label{
-          opacity: 0.5;
-            cursor: not-allowed;
-            background: #e9ecef;
+
+    .btt-style-cancel input:disabled+label {
+        opacity: 0.5;
+        cursor: not-allowed;
+        background: #e9ecef;
 
     }
-    .btt-style-cancel label:hover:not(.disable){
-            background-color: #bebebe;
+
+    .btt-style-cancel label:hover:not(.disable) {
+        background-color: #bebebe;
     }
+
     p {
         font-family: var(--montserrat_fonte);
     }
@@ -712,20 +722,23 @@ body.persona{
     .infosfinais {
         padding-top: 7vh;
     }
-     textarea#obspersonalizacao{
-            padding-left: 10px;
-            padding-top: 10px;
-            width: 65vh;
-            height: 20vh;
-            border-radius: 0.4rem;
-            resize: none;
-            outline: none;
-        }
+
+    textarea#obspersonalizacao {
+        padding-left: 10px;
+        padding-top: 10px;
+        width: 65vh;
+        height: 20vh;
+        border-radius: 0.4rem;
+        resize: none;
+        outline: none;
+    }
+
     .observacoes {
         resize: none;
         width: 50vh;
         height: 50vh;
     }
+
     .addcarrinho {
         font-family: var(--montserrat_fonte);
         width: 40vh;
@@ -746,6 +759,10 @@ body.persona{
     .alinhabtt {
         display: flex;
         justify-content: center;
+    }
+
+    .resto {
+        visibility: hidden;
     }
 }
 
@@ -1859,7 +1876,8 @@ footer.col-6.col-md-2.mb-3 {
     width: 30vh;
     margin-top: 15%;
 }
-.footerlink:hover{
+
+.footerlink:hover {
     color: var(--cinza_clarinho);
     transform: scale(1.06);
     transition: 0.5s ease;
@@ -1894,10 +1912,12 @@ footer.col-6.col-md-2.mb-3 {
 
     }
 }
-#btnCadastrarLancamento:hover{
+
+#btnCadastrarLancamento:hover {
     transform: scale(1.1);
     transition: 0.6s ease;
 }
+
 /*---------------------------------------------------------------------------TELA PHONES-------------------------------------------------------------------------------------- */
 
 @media only screen and (max-width: 600px) {
@@ -2706,15 +2726,18 @@ footer.col-6.col-md-2.mb-3 {
         align-items: center;
         align-content: center;
     }
+
     /*---------------------------------- Personalize - Phone ------------------------ */
-    .persona{
+    .persona {
         padding: 0;
         margin: 0;
     }
-    .imgbackpersonal{
+
+    .imgbackpersonal {
         display: none;
     }
-    .container-fluid.persona{
+
+    .container-fluid.persona {
         background-image: url(../img/personalizacao/backpersona.svg);
         background-repeat: no-repeat;
         background-size: cover;
@@ -2723,26 +2746,83 @@ footer.col-6.col-md-2.mb-3 {
         height: 40vh;
         margin: 0;
     }
-    .criesuaobra{
-        font-size: 3rem;
+
+    .criesuaobra {
+        font-size: 4rem;
         position: relative;
         z-index: 10;
-        top: 10vh;
-        color: #891515;
-    }
-    .borda-superior{
-        margin: -10vh;
-        padding: 0 1rem 0 1rem;
-        margin: 0 3rem 0 3rem;
-        position: none;
-        min-height: 10vh;
-    }
-    .btt-style{
-        left:2rem;
-        right:2rem;
-    }
-    .container-fluid.cont-passospersona {
-        bottom:0;
+        top: 20vh;
+        color: var(--branco);
     }
 
+    .borda-superior {
+        width: 45vh;
+        padding: 0 1rem 0 1rem;
+        margin: 0 3rem 0 3rem;
+        position: relative;
+        top: -42vh;
+    }
+
+    .container-fluid.cont-passospersona {
+        bottom: 0;
+        padding: 0;
+
+        .btt-style {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .btt-style label {
+            width: 33vh;
+            font-size: 1rem;
+            height: 8.5vh;
+            margin: 1rem;
+        }
+
+        .btt-style-cancel label {
+            width: 17vh;
+            font-size: 1rem;
+            height: 8.5vh;
+            margin: 1rem;
+        }
+
+        .alignbtts {
+            display: flex;
+            flex-direction: column;
+            padding-top: 2vh;
+        }
+
+        textarea#obspersonalizacao {
+            width: 43vh;
+        }
+    }
+
+    #borda2 {
+        display: none;
+    }
+
+    .contpizza {
+        position: relative;
+        top: -16vh;
+
+        img {
+            width: 50%;
+        }
+    }
+
+    .passo {
+        margin: 1rem;
+    }
+
+    #pizzaForm {
+        z-index: 10;
+        margin-top: -13vh;
+    }
+
+    .infosfinais {
+        margin: 1rem;
+
+    }
 }
