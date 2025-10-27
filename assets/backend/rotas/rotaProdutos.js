@@ -50,27 +50,29 @@ router.get('/:id', async (req, res) => {
         }
         
         // Adiciona evento ao botão de adicionar ao carrinho
-        const botaoAdicionar = document.querySelector('.ddcarrinho_informacoes');
+        const botaoAdicionar = document.querySelector('.addcarrinho_informacoes'); // Corrigido: '.addcarrinho_informacoes'
         if (botaoAdicionar) {
           botaoAdicionar.addEventListener('click', async function() {
-            const inputQuantidade = document.getElementById('quantidade-input').value;
+            const inputQuantidade = document.getElementById('quantidade-input'); // Corrigido: obter o elemento, não o valor
             const quantidade = inputQuantidade ? parseInt(inputQuantidade.value) || 1 : 1;
-            const usuarioId = localStorage.getItem('id');
             
-            if (!usuarioId) {
+            const token = localStorage.getItem('token');
+        
+            if (!token) {
               alert('Por favor, faça login para adicionar itens ao carrinho');
+              window.location.href = '/login.html';
               return;
             }
 
             try {
-              const resposta = await fetch('http://localhost:3000/carrinho/adicionar', {
+              const resposta = await fetch('/carrinho/adicionar', { // Alterado para caminho relativo
                 method: 'POST',
                 headers: {
                   'Content-Type': 'application/json',
+                  'Authorization': 'Bearer ' + token 
                 },
                 body: JSON.stringify({
-                  usuarioId: usuarioId,
-                  id: produtoAtual.id,
+                  id: produtoAtual.id.toString(),
                   nome: produtoAtual.nome,
                   preco: produtoAtual.preco,
                   imagem: produtoAtual.imagem,
@@ -83,7 +85,14 @@ router.get('/:id', async (req, res) => {
               if (resposta.ok) {
                 alert('Produto adicionado ao carrinho!');
               } else {
-                alert('Erro: ' + resultado.erro);
+                if (resposta.status === 401) {
+                  alert('Sua sessão expirou. Faça login novamente.');
+                  localStorage.removeItem('token');
+                  localStorage.removeItem('usuario');
+                  window.location.href = '/login.html';
+                } else {
+                  alert('Erro: ' + resultado.erro);
+                }
               }
             } catch (erro) {
               console.error('Erro:', erro);

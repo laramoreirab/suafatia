@@ -98,6 +98,7 @@ const pedido = {
                 preco: 60.00, // Preço base da pizza personalizada
                 quantidade: 1,
                 tipo: 'pizza_personalizada',
+                imagem: '/assets/img/personalizacao/pizzapersona.svg',
                 personalizacao: {
                     tamanho: formData.get('tamanho'),
                     massa: formData.get('massa'),
@@ -118,7 +119,7 @@ const pedido = {
     const token = localStorage.getItem('token');
 
         try {
-                const response = await fetch('http://localhost:3000/carrinho', {
+                const response = await fetch('http://localhost:3000/carrinho/adicionar/personalize', {
                     method: 'POST',
                     headers: {
                     'Content-Type': 'application/json',
