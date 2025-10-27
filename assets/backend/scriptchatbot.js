@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const deployment = "";
     const apiVersion = "";
 
+
     // Função para adicionar mensagens ao chat
     function addMessage(text, sender) {
         const message = document.createElement("div");
