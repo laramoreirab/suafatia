@@ -1,32 +1,6 @@
 [
   {
     "usuarioId": "1761269086674",
-    "itens": [
-      {
-        "pedido": {
-          "nome": "Pizza Personalizada",
-          "preco": 60,
-          "quantidade": 1,
-          "tipo": "pizza_personalizada",
-          "imagem": "/assets/img/personalizacao/pizzapersona.svg",
-          "personalizacao": {
-            "tamanho": "Média",
-            "massa": "Pan",
-            "queijo": "Mussarela Vegana",
-            "recheio": [
-              "4 Queijos",
-              "Carne Seca"
-            ],
-            "cobertura": [
-              "Azeitona",
-              "Milho",
-              "Shimeji"
-            ],
-            "observacoes": "oiii"
-          },
-          "timestamp": "2025-10-27T05:58:25.676Z"
-        }
-      }
-    ]
+    "itens": []
   }
 ]

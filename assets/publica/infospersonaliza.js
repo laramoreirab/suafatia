@@ -98,7 +98,7 @@ const pedido = {
                 preco: 60.00, // Preço base da pizza personalizada
                 quantidade: 1,
                 tipo: 'pizza_personalizada',
-                imagem: '/assets/img/personalizacao/pizzapersona.svg',
+                imagem: 'assets/img/personalizacao/pizzapersona.png',
                 personalizacao: {
                     tamanho: formData.get('tamanho'),
                     massa: formData.get('massa'),

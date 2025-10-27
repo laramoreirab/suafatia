@@ -60,27 +60,37 @@ function exibirCarrinho(carrinho) {
     
     // Adiciona cada item
     carrinho.itens.forEach((item) => {
+        // Verifica se é pizza personalizada (nova estrutura)
+        const isPizzaPersonalizada = item.tipo === 'pizza_personalizada'
+        
+        // Define dados do item baseado na estrutura correta
+        const itemId = item.id
+        const itemNome = item.nome
+        const itemPreco = item.preco
+        const itemQuantidade = item.quantidade
+        const itemImagem = item.imagem || '/assets/img/personalizacao/pizzapersona.png'
+        
         const itemHTML = `
-            <div class="produtos" data-item-id="${item.id}">
-                <a href="#" class="excluir" data-item-id="${item.id}">X</a>
-                <img src="${item.imagem || 'assets/img/pizzas/default.svg'}" alt="${item.nome}" class="imgproduto">
-                <h6>${item.nome}</h6>
+            <div class="produtos" data-item-id="${itemId}">
+                <a href="#" class="excluir" data-item-id="${itemId}">X</a>
+                <img src="${itemImagem}" alt="${itemNome}" class="imgproduto">
+                <h6>${itemNome}</h6>
                 <div class="qtdprodutos">
-                    <a href="#" class="adicionar" data-item-id="${item.id}" data-quantidade="${item.quantidade}">+</a>
-                    <p class="quantidadeprod">${item.quantidade}</p>
-                    <a href="#" class="retirar" data-item-id="${item.id}" data-quantidade="${item.quantidade}">-</a>
+                    <a href="#" class="adicionar" data-item-id="${itemId}" data-quantidade="${itemQuantidade}">+</a>
+                    <p class="quantidadeprod">${itemQuantidade}</p>
+                    <a href="#" class="retirar" data-item-id="${itemId}" data-quantidade="${itemQuantidade}">-</a>
                 </div>
-                <div class="valorproduto"><b>R$ ${(item.preco * item.quantidade).toFixed(2).replace('.', ',')}</b></div>
+                <div class="valorproduto"><b>R$ ${(itemPreco * itemQuantidade).toFixed(2).replace('.', ',')}</b></div>
             </div>
             <div class="detalhes">
                 <h5><b>Detalhes</b></h5>
-                ${item.tipo === 'pizza_personalizada' ? `
-                    <p>Tamanho: ${item.personalizacao.tamanho}</p>
-                    <p>Massa: ${item.personalizacao.massa}</p>
-                    <p>Queijo: ${item.personalizacao.queijo}</p>
-                    <p>Recheio: ${item.personalizacao.recheio.join(', ')}</p>
-                    <p>Cobertura: ${item.personalizacao.cobertura.join(', ')}</p>
-                    ${item.personalizacao.observacoes ? `<p>Obs: ${item.personalizacao.observacoes}</p>` : ''}
+                ${isPizzaPersonalizada ? `
+                    <p><strong>Tamanho:</strong> ${item.personalizacao.tamanho}</p>
+                    <p><strong>Massa:</strong> ${item.personalizacao.massa}</p>
+                    <p><strong>Queijo:</strong> ${item.personalizacao.queijo}</p>
+                    ${item.personalizacao.recheio && item.personalizacao.recheio.length > 0 ? `<p><strong>Recheio:</strong> ${item.personalizacao.recheio.join(', ')}</p>` : ''}
+                    ${item.personalizacao.cobertura && item.personalizacao.cobertura.length > 0 ? `<p><strong>Cobertura:</strong> ${item.personalizacao.cobertura.join(', ')}</p>` : ''}
+                    ${item.personalizacao.observacoes ? `<p><strong>Observações:</strong> ${item.personalizacao.observacoes}</p>` : ''}
                 ` : `
                     <p>Pizza do cardápio</p>
                 `}
@@ -135,19 +145,29 @@ function adicionarEventListeners() {
 // Atualizar resumo do pedido
 function atualizarResumo(carrinho) {
     const frete = 7.00
-    const subtotal = carrinho.total || 0
+    
+    // Calcula o subtotal somando todos os itens
+    let subtotal = 0
+    if (carrinho.itens && carrinho.itens.length > 0) {
+        carrinho.itens.forEach(item => {
+            subtotal += item.preco * item.quantidade
+        })
+    }
+    
     const total = subtotal + frete
     
     // Atualiza valores no resumo
     const contextResumoContainer = document.querySelector('.cont-resumo')
     
     // Lista itens no resumo
-    const itensResumo = carrinho.itens && carrinho.itens.length > 0 ? carrinho.itens.map(item => `
-        <div class="context-resumo">
-            <p class="nomeprod">${item.nome} (x${item.quantidade})</p>
-            <p class="precoprodresumo">R$ ${(item.preco * item.quantidade).toFixed(2).replace('.', ',')}</p>
-        </div>
-    `).join('') : '<p class="nomeprod" style="text-align: center;">Nenhum item</p>'
+    const itensResumo = carrinho.itens && carrinho.itens.length > 0 ? carrinho.itens.map(item => {
+        return `
+            <div class="context-resumo">
+                <p class="nomeprod">${item.nome} (x${item.quantidade})</p>
+                <p class="precoprodresumo">R$ ${(item.preco * item.quantidade).toFixed(2).replace('.', ',')}</p>
+            </div>
+        `
+    }).join('') : '<p class="nomeprod" style="text-align: center;">Nenhum item</p>'
     
     // Reconstrói o resumo mantendo a estrutura
     const resumoAtualizado = `
@@ -172,6 +192,14 @@ function atualizarResumo(carrinho) {
     `
     
     contextResumoContainer.innerHTML = resumoAtualizado
+    
+    // Salva o resumo no localStorage para usar nas outras páginas
+    localStorage.setItem('resumoCarrinho', JSON.stringify({
+        itens: carrinho.itens,
+        subtotal: subtotal,
+        frete: frete,
+        total: total
+    }))
 }
 
 // Alterar quantidade de um item
