@@ -38,7 +38,7 @@ function carregarResumo() {
         // Se estiver na página de pagamento, o botão é "Finalizar"
         proximaPagina = null;
         textoBotao = 'Finalizar';
-        botaoFinal = `<button id="finalizarCompra" class="continuar">Finalizar</button>`;
+        botaoFinal = `<div class="alignbotaofinalizar"><button id="finalizarCompra" class="finalizar">Finalizar</button><div>`;
     } else {
         botaoFinal = `<a href="${proximaPagina}" class="continuarcompra"><button class="continuar">${textoBotao}</button></a>`;
     }
