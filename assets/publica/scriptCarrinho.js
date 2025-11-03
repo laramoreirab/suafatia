@@ -42,13 +42,12 @@ async function carregarCarrinho() {
 // Exibir itens do carrinho na tela
 function exibirCarrinho(carrinho) {
     const containerItens = document.querySelector('.contcompras')
-    
     if (!carrinho.itens || carrinho.itens.length === 0) {
         containerItens.innerHTML = `
-            <div style="text-align: center; padding: 50px; font-family: var(--montserrat_fonte);">
+            <div class="carrinho_vazio">
                 <h3>Seu carrinho está vazio!</h3>
                 <p>Adicione pizzas deliciosas!</p>
-                <a href="cardapio.html"><button style="margin-top: 20px; padding: 10px 20px; border-radius: 5px; border: none; background-color: #891515; color: white; cursor: pointer; font-family: var(--montserrat_fonte);">Ver Cardápio</button></a>
+                <a href="cardapio.html"><button class="botao_vercardapio">Ver Cardápio</button></a>
             </div>
         `
         atualizarResumo(carrinho)

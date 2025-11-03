@@ -52,9 +52,19 @@ function fazerLogout() {
     }
 }
 
+function atualizarContador(){
+    const iconeCarrinho = iconesDiv.querySelector('.bagshop')
+    if ()
+
+
+
+
+}
+
 // Verifica o estado ao carregar a página
 document.addEventListener('DOMContentLoaded', () => {
     verificarEExibirLogout()
+    atualizarContador()
 })
 
 // Opcional: Verifica periodicamente se o token ainda é válido

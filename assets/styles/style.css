@@ -280,8 +280,10 @@ nav {
 }
 
 .linecarrossel {
-    width: 160px;/* comprimento da linha */
-    height: 2px; /* espessura da linha */
+    width: 160px;
+    /* comprimento da linha */
+    height: 2px;
+    /* espessura da linha */
     transform: rotate(90deg);
     margin-top: 200px;
 }
@@ -325,13 +327,16 @@ nav {
 
 .redirecionamentochatbot {
     position: fixed;
-    bottom: 20px;/* distância do fundo da tela */
-    right: 20px; /* distância da borda esquerda */
+    bottom: 20px;
+    /* distância do fundo da tela */
+    right: 20px;
+    /* distância da borda esquerda */
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 1rem;
     z-index: 9999;
+
     img {
         width: 150%;
     }
@@ -759,6 +764,34 @@ body.persona {
 }
 
 /*---------------------------------------------------------- Carrinho ----------------------------------------*/
+.carrinho_vazio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin-right: 45rem;
+    padding: 50px;
+    font-family: var(--montserrat_fonte);
+}
+
+.botao_vercardapio {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #891515;
+    color: white;
+    cursor: pointer;
+    font-family: var(--montserrat_fonte);
+    transition: 1s ease;
+}
+
+.botao_vercardapio:hover {
+    transition: 1s ease;
+    transform: scale(1.1);
+}
+
 .cont-carrinho {
     position: relative;
     top: 18vh;
@@ -910,6 +943,12 @@ body.persona {
     height: 7vh;
     color: var(--branco);
     font-weight: 600;
+    transition: 1s ease;
+}
+
+.continuar:hover {
+    background-color: var(--vermelho_escuro);
+    transition: 1s ease;
 }
 
 .separacao {
@@ -977,6 +1016,13 @@ body.persona {
         margin-top: 3vh;
         margin-bottom: 7vh;
         color: #716f6f;
+        transition: 1s ease;
+    }
+
+    .salvar-endereco:hover {
+        transition: 1s ease;
+        background-color: #625f5fa7;
+        color: var(--branco);
     }
 }
 
@@ -1057,6 +1103,13 @@ body.persona {
         margin-top: 3vh;
         margin-bottom: 7vh;
         color: #716f6f;
+        transition: 1s ease;
+    }
+
+    .salvar-pagamento:hover {
+        transition: 1s ease;
+        background-color: #625f5fa7;
+        color: var(--branco);
     }
 }
 
@@ -1069,6 +1122,12 @@ body.persona {
     height: 7vh;
     color: var(--branco);
     font-weight: 600;
+    transition: 1s ease;
+}
+
+.finalizar:hover {
+    transition: 1s ease;
+    background-color: var(--vermelho_escuro);
 }
 
 
@@ -1285,6 +1344,7 @@ body.persona {
     justify-content: center;
     align-items: center;
     border-radius: 0.8rem;
+    transition: 0.7S ease;
 
     h1 {
         font-family: var(--cinzel_fonte);
@@ -1313,6 +1373,7 @@ body.persona {
         border: 2px solid var(--amarelo_meioapagado);
         font-weight: 600;
         font-size: 1.04rem;
+        transition: 1s ease;
     }
 
     span {
@@ -1325,7 +1386,16 @@ body.persona {
 
     }
 }
-
+.card_cardapio:hover{
+    transform: scale(1.05);
+    transition: 0.7s ease;
+}
+.botao_cardcardapio:hover{
+    button{
+        background-color: var(--amarelo_meioapagado);
+        transition: 1s ease;
+    }
+}
 
 /* ------------------------------------------------------------ Login ------------------------------------------------------*/
 #body_login {
@@ -2132,6 +2202,26 @@ footer.col-6.col-md-2.mb-3 {
     }
 
     /* -----------------------------------------------Carrinho - Phone-------------------------------------- */
+    .carrinho_vazio {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        margin-right: 67rem;
+    }
+
+    .botao_vercardapio {
+        margin-top: 20px;
+        padding: 10px 20px;
+        border-radius: 5px;
+        border: none;
+        background-color: #891515;
+        color: white;
+        font-family: var(--montserrat_fonte);
+        transition: 1s ease; 
+    }
+
     .cont-carrinho {
         margin: 0;
         padding: 0;
