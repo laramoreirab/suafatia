@@ -52,13 +52,54 @@ function fazerLogout() {
     }
 }
 
-function atualizarContador(){
+function atualizarContador() {
+    const iconesDiv = document.querySelector('.icones')
+    if (!iconesDiv) return
+    
     const iconeCarrinho = iconesDiv.querySelector('.bagshop')
-    if ()
+    if (!iconeCarrinho) return
 
+    const resumoData = localStorage.getItem('resumoCarrinho')
+    let totalItens = 0
 
+    if (resumoData) {
+        const resumo = JSON.parse(resumoData)
+        if (resumo.itens && resumo.itens.length > 0) {
+            totalItens = resumo.itens.reduce((soma, item) => soma + (item.quantidade || 1), 0)
+        }
+    }
+    
+    let contador = iconeCarrinho.querySelector('.contador-carrinho')
+    
+    if (totalItens === 0) {
+        if (contador) contador.remove()
+        return
+    }
+    
+    if (!contador) {
+        contador = document.createElement('span')
+        contador.classList.add('contador-carrinho')
+        Object.assign(contador.style, {
+            position: 'absolute',
+            top: '2px',
+            right: '2px',
+            backgroundColor: 'red',
+            color: 'white',
+            fontSize: '12px',
+            borderRadius: '50%',
+            width: '18px',
+            height: '18px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            fontWeight: 'bold',
+            zIndex: '10'
+        })
+        iconeCarrinho.style.position = 'relative'
+        iconeCarrinho.appendChild(contador)
+    }
 
-
+    contador.textContent = totalItens
 }
 
 // Verifica o estado ao carregar a página
@@ -70,4 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // Opcional: Verifica periodicamente se o token ainda é válido
 setInterval(() => {
     verificarEExibirLogout()
+    atualizarContador()
 }, 5000) // Verifica a cada 5 segundos
+
+window.atualizarContador = atualizarContador
