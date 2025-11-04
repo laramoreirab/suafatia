@@ -1,6 +1,14 @@
 [
   {
     "usuarioId": "1761269086674",
-    "itens": []
+    "itens": [
+      {
+        "id": "3",
+        "quantidade": 1,
+        "nome": "Frango",
+        "preco": "54.90",
+        "imagem": "/assets/img/pizzas/frango.svg"
+      }
+    ]
   }
 ]

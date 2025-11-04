@@ -52,22 +52,56 @@ function fazerLogout() {
     }
 }
 
-function atualizarContador() {
+async function buscarCarrinhoDoBackend() {
+    const token = localStorage.getItem('token')
+    
+    // Se não está logado, retorna 0
+    if (!token) return 0
+    
+    try {
+        const response = await fetch('http://localhost:3000/carrinho', {
+            headers: {
+                'Authorization': `Bearer ${token}`
+            }
+        })
+        
+        if (response.ok) {
+            const carrinho = await response.json()
+            
+            // Conta os itens
+            let totalItens = 0
+            
+            if (carrinho.itens && carrinho.itens.length > 0) {
+                carrinho.itens.forEach(item => {
+                    // Verifica se é pizza personalizada
+                    if (item.pedido && item.pedido.quantidade) {
+                        totalItens += item.pedido.quantidade
+                    } else if (item.quantidade) {
+                        // Item normal
+                        totalItens += item.quantidade
+                    }
+                })
+            }
+            
+            return totalItens
+        }
+        
+        return 0
+    } catch (erro) {
+        console.error('Erro ao buscar carrinho:', erro)
+        return 0
+    }
+}
+
+async function atualizarContador() {
     const iconesDiv = document.querySelector('.icones')
     if (!iconesDiv) return
     
     const iconeCarrinho = iconesDiv.querySelector('.bagshop')
     if (!iconeCarrinho) return
 
-    const resumoData = localStorage.getItem('resumoCarrinho')
-    let totalItens = 0
-
-    if (resumoData) {
-        const resumo = JSON.parse(resumoData)
-        if (resumo.itens && resumo.itens.length > 0) {
-            totalItens = resumo.itens.reduce((soma, item) => soma + (item.quantidade || 1), 0)
-        }
-    }
+    // MUDANÇA AQUI: busca do backend ao invés do localStorage
+    const totalItens = await buscarCarrinhoDoBackend()
     
     let contador = iconeCarrinho.querySelector('.contador-carrinho')
     
@@ -82,18 +116,19 @@ function atualizarContador() {
         Object.assign(contador.style, {
             position: 'absolute',
             top: '2px',
-            right: '2px',
-            backgroundColor: 'red',
+            right: '13px',
+            backgroundColor: '#E82A00',
             color: 'white',
-            fontSize: '12px',
+            fontSize: '9px',
             borderRadius: '50%',
             width: '18px',
             height: '18px',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
+            lineHeight: '4px',
             fontWeight: 'bold',
-            zIndex: '10'
+            zIndex: '10',
         })
         iconeCarrinho.style.position = 'relative'
         iconeCarrinho.appendChild(contador)
@@ -103,15 +138,15 @@ function atualizarContador() {
 }
 
 // Verifica o estado ao carregar a página
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
     verificarEExibirLogout()
-    atualizarContador()
+    await atualizarContador() // Adiciona await
 })
 
 // Opcional: Verifica periodicamente se o token ainda é válido
-setInterval(() => {
+setInterval(async () => {
     verificarEExibirLogout()
-    atualizarContador()
-}, 5000) // Verifica a cada 5 segundos
+    await atualizarContador() // Adiciona await
+}, 5000)
 
 window.atualizarContador = atualizarContador

@@ -141,7 +141,7 @@ const pedido = {
                     });
                     // Limpa textarea
                  document.getElementById('obspersonalizacao').value = '';
-                }else {
+                }else{
             if (response.status === 401) {
                 // Token inválido ou expirado
                 alert('Sua sessão expirou. Faça login novamente.');
@@ -151,6 +151,9 @@ const pedido = {
             } else {
                 mostrarAlerta('Erro ao adicionar ao carrinho: ' + result.erro, 'error');
             }
+        }
+        if (typeof window.atualizarContador === 'function') {
+            await window.atualizarContador()
         }
     } catch (error) {
         mostrarAlerta('Erro de conexão com o servidor', 'error');
